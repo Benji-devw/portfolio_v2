@@ -62,7 +62,7 @@
 
 
 #SkillsArea .Skills_Section {
-  min-height: 1800vh;
+  min-height: 1000vh;
   display: flex;
   justify-content: center;
   /* padding-right: 7.5rem;
@@ -132,18 +132,28 @@
 
 
 
+/* .height_CalcOpen {
+  min-height: 100px;
+  transition-duration: 1s;
+}
+.height_CalcClose {
+  height: 0px;
+} */
 
 
 
 
-@media screen and (max-width: 1080) {
+@media screen and (max-width: 1080px) {
   #SkillsArea .Skills_Left {
     display: none !important;
   }
 }
-@media screen and (min-width: 600px) {
+@media screen and (max-width: 600px) {
+  #SkillsArea .Skills_Section {
+    max-width: 100%;
+  }
   #SkillsArea .Skills_Right {
-    width: calc(100%);
+    width: 100%;
   }
 
 }

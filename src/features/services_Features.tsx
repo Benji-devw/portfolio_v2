@@ -1,5 +1,5 @@
 import { Background } from '@/components/background/Background';
-import { Services } from '@/components/skills/Services';
+import { Services } from '@/components/services/Services';
 
 const ServicesFeatures = () => {
   

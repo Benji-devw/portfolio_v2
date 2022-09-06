@@ -56,10 +56,10 @@ const SkillsArea = ({skill}: IContextProps) => {
     setVal(rootRef.current?.offsetHeight)
 
     // console.log(rootRef.current?.offsetTop);
-    console.log(rootRef.current!.offsetTop);
+    // console.log(rootRef.current!.offsetTop);
     
 
-    console.log(scrolled);
+    // console.log(scrolled);
 
     window.addEventListener("scroll", listenToScroll);
     return () => window.removeEventListener("scroll", listenToScroll)
@@ -71,7 +71,7 @@ const SkillsArea = ({skill}: IContextProps) => {
   // console.log(scrolled);
   // window.pageYOffset
   return (
-    <div  id='SkillsArea'>
+    <div id='SkillsArea'>
 
           <div ref={rootRef} className="Skills_Section">
 
@@ -129,7 +129,7 @@ const SkillsArea = ({skill}: IContextProps) => {
                             
                             <div 
                               className={val.classe}
-                              style={{height: collapseOpen === `${val.classe}` ? '130px' : '0px'}} 
+                              style={{height: collapseOpen === `${val.classe}` ? '50px' : '0px'}}
                             >
                               <p>{val.desc}</p>
                             </div>
