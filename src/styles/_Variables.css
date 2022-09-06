@@ -1,0 +1,13 @@
+:root {
+
+--main-grad: -webkit-linear-gradient(120deg, #0785F2 0%, #BF04B3 100%);
+  
+  --main-light: #F5F5F5;
+  --main-blue: #0785F2;
+  --main-violet: #7328F7;
+  --main-magenta: #BF04B3;
+  --main-dark: #0e0e0e;
+
+  --main-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  --b-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}

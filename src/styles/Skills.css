@@ -1,0 +1,129 @@
+#SkillsArea {
+  /* padding: 4rem 0; */
+  /* overflow: visible; */
+}
+
+#SkillsArea h3 {
+  position: relative;
+  cursor: pointer;
+}
+#SkillsArea h3::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0%;
+  background-color: var(--main-blue);
+  height: 2px;
+  width: 40px;
+}
+.Collpase__Opened::after {
+ top: 50% !important;
+  animation: opened .5s forwards;
+} 
+.Collpase__Closed::after {
+  animation: closed .5s forwards;
+} 
+@keyframes opened {
+  to { transform: rotate(90deg); }
+}
+@keyframes closed {
+  from { transform: rotate(90deg); }
+  to { transform: rotate(0deg); }
+}
+
+
+
+
+
+
+.collapse_One, .collapse_Two, .collapse_Three, .collapse_four {
+  position: relative;
+  overflow: hidden;
+  transition: .5s;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+
+
+
+#SkillsArea .Skills_Section {
+  min-height: 1200vh;
+  /* background: #BF2C2C; */
+  display: flex;
+  justify-content: center;
+  /* padding: 2rem; */
+}
+
+
+
+
+#SkillsArea .Skills_Left {
+  /* width: 600px; */
+  /* background: #F25A38; */
+  /* box-shadow: var(--b-shadow); */
+}
+#SkillsArea .SkillsLeft_Content {
+  /* border: 1px dashed black; */
+  height: 100vh;
+  width: 100%;
+  margin: 1rem;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+
+
+
+
+
+
+
+#SkillsArea .Skills_Right {
+  width: 600px;
+  /* background: var(--juicyOrange);
+  box-shadow: var(--b-shadow); */
+  /* border: 1px dashed black; */
+  height: 100vh;
+  margin: 1rem;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#SkillsArea .SkillsRight_Content {
+  position: relative;
+} 
+
+
+#SkillsArea .SkillsRight_Content p {
+  margin: 0 1rem ;
+}
+
+/* #SkillsArea .SkillsRight_Content .hide {
+  opacity: 0;
+}
+#SkillsArea .SkillsRight_Content .show {
+  opacity: 1;
+} */
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1080px) {
+  #SkillsArea .Skills_Left {
+    display: none !important;
+  }
+}

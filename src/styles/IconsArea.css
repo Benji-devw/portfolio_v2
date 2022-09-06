@@ -1,0 +1,127 @@
+#IconsArea {
+  padding: 2rem 0;
+}
+
+.IconPath__Main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+.IconsArea__Item {
+  position: relative;
+  margin: 1rem;
+  padding: 1rem;
+
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  max-width: 250px;
+}
+
+
+.svgCircle__Animate {
+  animation: dash 1s linear forwards;
+}
+.svgPath__Animate {
+  animation: dash 2s linear forwards;
+}
+.textBrush__Animate {
+  animation-delay: 1s;
+}
+.textCode__Animate {
+  animation-delay: 2s;
+}
+.textNetwork__Animate {
+  animation-delay: 3s;
+}
+
+
+.st1, .st2, .st3 {
+  fill:none;
+  stroke:#F5F5F5;
+  stroke-width:1;
+  stroke-miterlimit:10;
+  
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  
+}
+.st1{
+  fill: var(--main-dark) !important;
+  stroke-width:2;
+}
+.st2{  
+  animation-delay: .3s;
+}
+.st3{  
+  animation-delay: .8s;
+  stroke-width:.5 !important;
+}
+
+
+
+
+
+.Brush span {
+  background: var(--main-blue);
+  background-clip: text;
+  -webkit-text-stroke: 1px transparent;
+  color: var(--main-dark);
+}
+.st_Brush {
+  fill:none;
+  stroke:#0785F2;
+  stroke-width:2;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation-delay: 1s;
+}
+
+
+
+
+
+.Code span {
+  background: var(--main-violet);
+  background-clip: text;
+  -webkit-text-stroke: 1px transparent;
+  color: var(--main-dark);
+}
+.st_Code {
+  fill:none;
+  stroke:var(--main-violet);
+  stroke-width:2;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation-delay: 2s;
+}
+
+
+
+
+
+.Network span {
+  background: var(--main-magenta);
+  background-clip: text;
+  -webkit-text-stroke: 1px transparent;
+  color: var(--main-dark);
+}
+.st_Network {
+  fill:none;
+  stroke:var(--main-magenta);
+  stroke-width:2;
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation-delay: 3s;
+}
+
+
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

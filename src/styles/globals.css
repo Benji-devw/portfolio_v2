@@ -1,0 +1,99 @@
+
+/* Libs */
+@import './_Variables.css';
+@import './_libs/appGuruz.css';
+
+
+/* Features */
+@import './HeroTitle.css';
+@import './IconsArea.css';
+@import './Skills.css';
+
+
+
+/* Fonts */
+@font-face {
+  font-family: "poppinsRegular";
+  src: url("./_libs/Poppins/Poppins-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "poppinsLight";
+  src: url("./_libs/Poppins/Poppins-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "poppinsBold";
+  src: url("./_libs/Poppins/Poppins-Bold.ttf") format("truetype");
+}
+
+
+
+
+
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'poppinsLight', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: var(--main-dark);
+  color: var(--main-light);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+p {
+  font-size: 1.1rem;
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  font-size: 2rem;
+  color: var(--main-blue);
+  margin: 1rem 0 0 0;
+  padding: 0;
+}
+
+code {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: 2.2rem;
+  text-align: center;
+  width: 100%;
+  background: var(--main-light);
+  background-clip: text;
+  -webkit-text-stroke: .8px transparent;
+  color: var(--main-dark);
+}
+
+
+@media screen and (max-width: 1200px) {
+  p {
+    font-size: .9rem;
+  }
+  h3 {
+    font-size: 1.3rem;
+  }
+}
+
+
+/* @media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+} */
+

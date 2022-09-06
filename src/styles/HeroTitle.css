@@ -1,0 +1,89 @@
+#Hero__Title {
+  height: 100vh;
+  width: 100%;
+  font-family: 'poppinsBold';
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.Hero__Wrapper {
+  background-image: url("/media/circleHero.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.HeroTitle__Main {
+  position: relative;
+  /* height: 200px; */
+}
+.HeroTitle__Main h1 {
+  position: relative;
+  z-index: 3;
+  font-size: 8vw;
+  padding: 0;
+  margin: 0;
+  color: var(--main-light);
+}
+.ts1, .ts2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* transform: translate(-50%, -50%); */
+  background: var(--main-grad);
+  background-clip: text;
+  -webkit-text-stroke: 3px transparent;
+  color: var(--main-dark);
+}
+.ts1 {
+  z-index: 2;
+  font-size: 7.8vw;
+}
+.ts2 {
+  z-index: 1;
+  font-size: 7.6vw;
+}
+
+
+
+.HeroTitle__Subtitle {
+  margin-top: 0rem;
+  pointer-events: none;
+}
+.HeroTitle__Subtitle .firstName {
+  font-size: 6vw;
+  background: var(--main-light);
+  background-clip: text;
+  -webkit-text-stroke: 3px transparent;
+  color: var(--main-dark);
+}
+.HeroTitle__Subtitle .post {
+  font-size: 4vw;
+  color: var(--main-blue);
+}
+
+
+
+@media screen and (min-width: 1200px) {
+  .HeroTitle__Main h1 {
+     font-size: 8rem;
+  }
+  .ts1 {
+    font-size: 7.8rem;
+  }
+  .ts2 {
+    font-size: 7.6rem;
+  }
+  .HeroTitle__Subtitle {
+    margin-top: -4rem;
+  }
+  .HeroTitle__Subtitle .firstName {
+    font-size: 6rem;
+  }
+  .HeroTitle__Subtitle .post {
+    font-size: 4rem;
+  }
+}
