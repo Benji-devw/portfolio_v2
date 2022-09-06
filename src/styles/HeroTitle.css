@@ -87,3 +87,21 @@
     font-size: 4rem;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .HeroTitle__Main h1 {
+    font-size: 4rem;
+  }
+ .ts1 {
+   font-size: 3.8rem;
+  }
+  .ts2 {
+    font-size: 3.6rem;
+  }
+  .HeroTitle__Subtitle .firstName {
+    font-size: 3rem;
+  }
+  .HeroTitle__Subtitle .post {
+    font-size: 2rem;
+  }
+}

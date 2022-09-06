@@ -1,5 +1,6 @@
 #IconsArea {
   padding: 2rem 0;
+
 }
 
 .IconPath__Main {
@@ -7,12 +8,11 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 100%;
 }
 
 .IconsArea__Item {
   position: relative;
-  margin: 1rem;
+  margin: 1rem 3rem;
   padding: 1rem;
 
   border-radius: 10px;
@@ -22,7 +22,7 @@
 
 
 .svgCircle__Animate {
-  animation: dash 1s linear forwards;
+  animation: dash .5s linear forwards;
 }
 .svgPath__Animate {
   animation: dash 2s linear forwards;

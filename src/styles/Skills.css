@@ -1,11 +1,11 @@
 #SkillsArea {
-  /* padding: 4rem 0; */
-  /* overflow: visible; */
+  display: flex;
+  justify-content: center;
 }
 
 #SkillsArea h3 {
   position: relative;
-  cursor: pointer;
+  /* color: var(--main-blue); */
 }
 #SkillsArea h3::after {
   content: '';
@@ -33,10 +33,21 @@
 
 
 
+.design {
+  color: var(--main-blue);
+}
+.programmation {
+  color: var(--main-violet);
+}
+.backend {
+  color: var(--main-magenta);
+}
 
 
 
-.collapse_One, .collapse_Two, .collapse_Three, .collapse_four {
+.collapse_One, .collapse_Two, .collapse_Three, .collapse_Four,
+.collapse_Five, .collapse_Six, .collapse_Seven, .collapse_Eight,
+.collapse_Nine, .collapse_Ten, .collapse_Eleven, .collapse_Twelve {
   position: relative;
   overflow: hidden;
   transition: .5s;
@@ -51,17 +62,19 @@
 
 
 #SkillsArea .Skills_Section {
-  min-height: 1200vh;
-  /* background: #BF2C2C; */
+  min-height: 1800vh;
   display: flex;
   justify-content: center;
-  /* padding: 2rem; */
+  /* padding-right: 7.5rem;
+  padding-left: 7.5rem; */
+  max-width: 80%;
 }
 
 
 
 
 #SkillsArea .Skills_Left {
+  width: calc(40%);
   /* width: 600px; */
   /* background: #F25A38; */
   /* box-shadow: var(--b-shadow); */
@@ -69,7 +82,7 @@
 #SkillsArea .SkillsLeft_Content {
   /* border: 1px dashed black; */
   height: 100vh;
-  width: 100%;
+  /* width: 100%; */
   margin: 1rem;
   position: -webkit-sticky;
   position: sticky;
@@ -86,7 +99,8 @@
 
 
 #SkillsArea .Skills_Right {
-  width: 600px;
+  width: calc(60%);
+  /* width: 600px; */
   /* background: var(--juicyOrange);
   box-shadow: var(--b-shadow); */
   /* border: 1px dashed black; */
@@ -122,8 +136,14 @@
 
 
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1080) {
   #SkillsArea .Skills_Left {
     display: none !important;
   }
+}
+@media screen and (min-width: 600px) {
+  #SkillsArea .Skills_Right {
+    width: calc(100%);
+  }
+
 }

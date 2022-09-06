@@ -1,0 +1,83 @@
+{
+  "design": 
+    {
+      "name": "design",
+      "description": "Enrichissez vos dessins et peintures avec des palettes de couleurs tirées des derniers projets.",
+      "context": [
+        {
+          "classe": "collapse_One",
+          "title": "Prototype et conception UX", 
+          "desc": "Pour la conception d’une UX efficace et accessible, je m’inspire et respect les tendances web ainsi que les bonnes pratiques afin, de rendre un prototype intéractif et intuitif."
+        },
+        {
+          "classe": "collapse_Two",
+          "title": "Conception UI", 
+          "desc": "L'interface utilisateur est un point non négligable pour mettre en confiance un client. Une interface épurée, légère et responsive donne immédiatement un sentiment de propreté et de professionnalisme."
+        },
+        {
+          "classe": "collapse_Three",
+          "title": "Navigation et Animation", 
+          "desc": "Un effet de perspective, un boutton animé, une réaction de l’interface avec le curseur ou la molette de l’utilisateur... Cela donne vie à l’interface et rend la navigation plus attrayante. C’est toujours un plaisir mais aussi un défi de trouver un comportement inédit/créatif, ainsi q’un style personnalisé pour chaque projet."
+        },
+        {
+          "classe": "collapse_Four",
+          "title": "Mes connaissance", 
+          "desc": "Photophop - Illutrator - XD"
+        }
+      ]
+    },
+  "programmation": 
+  {
+    "name": "programmation",
+    "description": "Enrichissez vos dessins et peintures avec des palettes de couleurs tirées des derniers projets.",
+    "context": [
+      {
+        "classe": "collapse_Five",
+        "title": "Programmation et process", 
+        "desc": "Le code, identification d’un developpeur sur ça facont de structurer et d’organiser un projet. Respecter le process d’une entitée est crucial pour un code propre et son évolution."
+      },
+      {
+        "classe": "collapse_Six",
+        "title": "JavaScript", 
+        "desc": "Le JavaScript est mon pricipale language de programmation. Des fonctions lisibles et des composants réutilisables sont primordial dans un projet développé seul ou à plusieurs."
+      },
+      {
+        "classe": "collapse_Seven",
+        "title": "Framework", 
+        "desc": "Les framework vont me permettre d’obtenir un code plus simple, plus léger et me faliciliter la tache pour la création d’une application web. La gestion des composants et de leurs états en les hiérarchisant séparément me permet d’obtenir une structure fluid et claire."
+      },
+      {
+        "classe": "collapse_Eight",
+        "title": "Mes connaissance", 
+        "desc": "Html/Css - Sass - Bootstrap/Tailwind - JavaScript - React/Nextjs - TypeScript in react - Npm - Git"
+      }
+    ]
+  },
+  "backend": 
+  {
+    "name": "backend",
+    "description": "Enrichissez vos dessins et peintures avec des palettes de couleurs tirées des derniers projets.",
+    "context": [
+      {
+        "classe": "collapse_Nine",
+        "title": "Le backend", 
+        "desc": "La partie invisible et la plus importante pour la gestion des données. Savoir traiter et sécuriser des requêtes avec un serveur ou une api est toujours une procedure délicate."
+      },
+      {
+        "classe": "collapse_Ten",
+        "title": "Json", 
+        "desc": "Les API sont très largements utilisées et il est important de savoir lire une documentation pour comprendre sont fonctionnement."
+      },
+      {
+        "classe": "collapse_Eleven",
+        "title": "Interface de programmation d'application", 
+        "desc": "Un effet de perspective, un boutton animé, une réaction de l’interface avec le curseur ou la molette de l’utilisateur... Cela donne vie à l’interface et rend la navigation plus attrayante. C’est toujours un plaisir mais aussi un défi de trouver un comportement inédit/créatif, ainsi q’un style personnalisé pour chaque projet."
+      },
+      {
+        "classe": "collapse_Twelve",
+        "title": "Mes connaissance", 
+        "desc": "NodeJs - Express - Postman - MongoDB - NOsql - Linux - Nginx - Pm2 - AWS - EC2 - Amplify"
+      }
+    ]
+  }
+}
