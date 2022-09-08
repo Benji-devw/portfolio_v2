@@ -1,38 +1,144 @@
 #Services {
-  /* min-height: 200vh; */
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-#Services .grid-container {
-  display: flex;
-  /* align-items: center; */
+  align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  /* max-width: 800px; */
+  padding: 0 0 8rem 0;
+  /* height: 60vh; */
 }
 
-#Services .Card {
-  overflow: hidden;
-  margin: 0rem;
-  /* padding: 1.5rem; */
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea1e;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  width: 300px;
-  height: 400px;
-}
-
-#Services .ServicesCard__Preview  {
+.IconPath__Main {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.Services__Item {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5vw 5rem 5vw;
+  padding: 1rem;
+
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  max-width: 300px;
+}
+
+.Services__Item .description {
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
   width: 100%;
-  height: 100%;
-  cursor: pointer;
+}
+.Services__Item .description p {
+  height: 100px;
+}
+
+
+
+
+
+
+.st1 {
+  fill: var(--main-dark);
+  stroke: var(--main-light);
+  stroke-width:1;
+  stroke-miterlimit:10;
+}
+.st2_Brush, .st3_Brush {
+  fill: none;
+  stroke: var(--main-blue);
+}
+.st2_Code, .st3_Code {
+  stroke:var(--main-violet);
+  animation-delay: 2s !important;
+}
+.st2_Backend, .st3_Backend {
+  stroke:var(--main-magenta);
+  animation-delay: 3s !important;
+}
+
+.svgCircle__Animate {
   transition-duration: .5s;
+}
+/* @keyframes pulse {
+  from { opacity: 1; }
+  to { opacity: 0; }
+} */
+
+
+
+
+
+.Brush span {
+  background: var(--main-blue);
+  background-clip: text;
+  -webkit-text-stroke: 1px transparent;
+  color: var(--main-dark);
+}
+.st_Brush {
+  fill:none;
+  stroke:var(--main-blue);
+  stroke-width:2;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation-delay: 1s !important;
+}
+
+
+.Code span {
+  background: var(--main-violet);
+  background-clip: text;
+  -webkit-text-stroke: 1px transparent;
+  color: var(--main-dark);
+}
+.st_Code {
+  fill:none;
+  stroke:var(--main-violet);
+  stroke-width:2;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation-delay: 2s !important;
+}
+
+
+.Backend span {
+  background: var(--main-magenta);
+  background-clip: text;
+  -webkit-text-stroke: 1px transparent;
+  color: var(--main-dark);
+}
+.st_Backend {
+  fill:none;
+  stroke:var(--main-magenta);
+  stroke-width:2;
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation-delay: 3s !important;
+}
+
+
+.svgPath__Animate {
+  animation: dash 2s linear forwards;
+}
+.textBrush__Animate {
+  animation-delay: 1s;
+}
+.textCode__Animate {
+  animation-delay: 2s;
+}
+.textBackend__Animate {
+  animation-delay: 3s;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
 }

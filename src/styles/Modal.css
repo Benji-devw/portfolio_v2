@@ -1,0 +1,75 @@
+.Modal__Wrapper {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  backdrop-filter: blur(10px);
+
+  background-color: rgba(0,0,0,.4);
+
+  animation: .4s modalBlur;
+  animation-timing-function: steps(2, end);
+  --slice-0: inset(0% 0% 0% 0%);
+  --slice-1: inset(60% 20% 25% 10%);
+  --slice-2: inset(50% -6px 45% 45%);
+  --slice-3: inset(70% 20% 25% 10%);
+  clip-path: var(--slice-0);
+}
+
+
+
+.Modal__Close {
+  position: fixed;
+  z-index: 200;
+  top: 2rem;
+  right: 5rem;
+  color: #fff;
+  cursor: pointer;
+  transform: scale(0);
+  animation: zoomIn .2s .4s cubic-bezier(0.2, 0.840, 0.440, 1.000) forwards;
+}
+
+
+
+
+@keyframes modalBlur {
+  0% {
+    clip-path: var(--slice-3);
+    transform: translate(30%, -40%);
+  }
+  30% {
+    clip-path: var(--slice-1);
+    transform: translate(-20%, 10%);
+  }
+  60% {
+    clip-path: var(--slice-2);
+    transform: translate(-30%, -20%);
+  }
+  80% {
+    clip-path: var(--slice-1);
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes zoomIn {
+  0% { transform:scale(0); }
+  100% { transform:scale(1); }
+}
+
+
+
+
+
+@media screen and (max-width: 600px) {
+  .Modal__Infos {
+    bottom: -10%;
+    width: 80%;
+  }
+  .slick-arrow  {
+    top: 65%;
+    height: 50px;
+  }
+}

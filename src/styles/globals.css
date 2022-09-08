@@ -1,15 +1,25 @@
 
 /* Libs */
+@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick-theme.css";
 @import './_Variables.css';
 @import './_libs/appGuruz.css';
+
+/* UI */
+@import './Modal.css';
+@import './Footer.css';
 
 
 /* Features */
 @import './HeroTitle.css';
-@import './IconsArea.css';
-@import './Skills.css';
 @import './Services.css';
+@import './Skills.css';
+@import './Porfolio.css';
 @import './WebArea.css';
+
+
+/* Components */
+@import './LineSection.css';
 
 
 
@@ -57,11 +67,18 @@ p {
 }
 
 h2 {
-  font-size: 2.2rem;
-  margin: 2rem 0;
+  margin: 0;
   padding: 0;
+  font-size: 4rem;
   text-align: center;
+  width: 100%;
+  background: var(--main-light);
+  background-clip: text;
+  -webkit-text-stroke: 3px transparent;
+  color: var(--main-dark);
+  text-transform: uppercase;
 }
+
 h3 {
   font-size: 2rem;
   margin: 1rem 0 0 0;
@@ -73,13 +90,19 @@ h4 {
   padding: 0;
   font-weight: 100;
 }
+h5 {
+  font-size: 1.8rem;
+  margin: 0;
+  padding: 0;
+}
+h6 {
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 0;
+  color: var(--main-blue);
+}
 
 code {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
   font-size: 2.2rem;
   text-align: center;
   width: 100%;
@@ -90,9 +113,40 @@ code {
 }
 
 
+
+
+.titleSection {
+  position: relative;
+}
+.titleSection p {
+  text-align: center;
+  margin-bottom: 3rem ;
+}
+
+
+.Skills__Content .titleSection {
+  z-index: 100;
+  top: 10rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 1200px) {
   p {
     font-size: .9rem;
+  }
+  h2 {
+  font-size: 3rem;
   }
   h3 {
     font-size: 1.3rem;
@@ -109,4 +163,5 @@ code {
     background: black;
   }
 } */
+
 

@@ -1,0 +1,88 @@
+#Footer {
+  padding: 2rem;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+#Footer .Footer__Grid {
+  max-width: 80vw;
+  position: relative;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  border-top: 1px solid var(--main-blue);
+
+}
+
+#Footer .Footer__Card {
+  flex: 2;
+  padding: 2rem 2rem;
+  width: 100%;
+}
+#Footer .Footer__Card p {
+  font-size: 1rem;
+}
+#Footer .Footer__Card ul {
+  list-style: none;
+  padding: 0;
+}
+#Footer .Footer__Card li {
+  cursor: pointer;
+  /* max-width: 200px; */
+}
+#Footer .Footer__Card li:hover {
+  color: var(--main-blue);
+}
+
+
+
+
+
+
+
+.footer_left {
+  text-align: left;
+}
+
+.footer_middle {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.footer_right {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+}
+.footer_right .Footer_Network {
+  width: 75px;
+}
+.footer_right .Footer_Network span {
+  cursor: pointer;
+
+}
+
+
+
+.copyright {
+  position: absolute;
+  bottom: -50px;
+  width: 100%;
+  padding: 1rem;
+}
+.copyright p {
+  font-size: .9rem;
+  text-align: center;
+}
+
+
+
+
+@media screen and (max-width: 900px) {
+  #Footer .Footer__Grid {
+    flex-direction: column;
+  }
+}

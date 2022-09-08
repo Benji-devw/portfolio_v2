@@ -44,7 +44,7 @@
       {
         "classe": "collapse_Seven",
         "title": "Framework", 
-        "desc": "Les framework vont me permettre d’obtenir un code plus simple, plus léger et me faliciliter la tache pour la création d’une application web. La gestion des composants et de leurs états en les hiérarchisant séparément me permet d’obtenir une structure fluid et claire."
+        "desc": "Les frameworks vont me permettrent d’obtenir un code plus simple, plus léger et me faliciliter la tache pour la création d’une application web. La gestion des composants et de leurs états en les hiérarchisant séparément me permet d’obtenir une structure fluid et claire."
       },
       {
         "classe": "collapse_Eight",
@@ -66,12 +66,12 @@
       {
         "classe": "collapse_Ten",
         "title": "Json", 
-        "desc": "Les API sont très largements utilisées et il est important de savoir lire une documentation pour comprendre sont fonctionnement."
+        "desc": "La légèreté et la lisibilité du format json reste pour moi simple et éfficace. La combinaison clé/valeur et sont typage au sein d’un objet ou d’un tableau, est pour moi une approche moderne et concorde avec les langages que j’utilises."
       },
       {
         "classe": "collapse_Eleven",
-        "title": "Interface de programmation d'application", 
-        "desc": "Un effet de perspective, un boutton animé, une réaction de l’interface avec le curseur ou la molette de l’utilisateur... Cela donne vie à l’interface et rend la navigation plus attrayante. C’est toujours un plaisir mais aussi un défi de trouver un comportement inédit/créatif, ainsi q’un style personnalisé pour chaque projet."
+        "title": "Interface de programmation d'application",
+        "desc": "Les API sont très largements utilisées et il est important de savoir lire une documentation pour comprendre sont fonctionnement."
       },
       {
         "classe": "collapse_Twelve",

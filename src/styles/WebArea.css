@@ -1,18 +1,21 @@
 #WebArea {
   padding: 2rem 0;
-  height: 300px;
-  display: flex;
-
+  overflow: hidden;
 }
 
 #WebArea .grid-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  /* max-width: 800px; */
+  position: relative;
+  height: 20vh;
+}
+.slick-slider {
+  top: 25%;
 }
 
-#WebArea .Card {
+.WebArea__SlideCard {
+  text-align: center;
+  animation-duration: 1s;
   filter: saturate(0);
+}
+.WebArea__SlideCard:hover {
+  filter: saturate(1) !important;
 }

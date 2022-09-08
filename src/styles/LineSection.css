@@ -1,0 +1,56 @@
+.LineSection {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80px;
+  width: 200px;
+  margin: 0 auto;
+}
+.LineSection__Line {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 2px;
+  width: 0px;
+  background-color: var(--main-blue);
+  border-radius: 5px;
+}
+.LineSection_Anim {
+  animation: LineAnim .5s linear forwards;
+}
+
+@keyframes LineAnim {
+  0% {
+    width: 0px;
+  }
+  50% {
+    width: 147px;
+  }
+  100% {
+    width: 100px;
+  }
+}
+
+
+/* .LineSection__Circle {
+  fill:none;
+  stroke: var(--main-light);
+  stroke-width: 1.3;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+} */
+/* .Circle_Anim {
+  animation: CicleAnim .5s linear forwards;
+}
+
+.LineSection__Circle {
+  animation-delay: .5s;
+} */
+
+/* @keyframes CicleAnim {
+  to {
+    stroke-dashoffset: 0;
+  }
+} */
