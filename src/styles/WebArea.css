@@ -11,11 +11,15 @@
   top: 25%;
 }
 
-.WebArea__SlideCard {
+#WebArea .WebArea__SlideCard {
   text-align: center;
   animation-duration: 1s;
   filter: saturate(0);
 }
-.WebArea__SlideCard:hover {
+#WebArea .WebArea__SlideCard:hover {
   filter: saturate(1) !important;
+}
+
+#WebArea .slick-prev, #WebArea .slick-next {
+  display: none !important;
 }

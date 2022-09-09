@@ -1,11 +1,13 @@
 import { useState, useEffect, ReactNode } from 'react';
 import { useRouter } from 'next/router';
 import Image from "next/image";
-import { Modal } from '@/structures/Modal'
+import { Modal } from '@/structures/Modal';
 import Slider from "react-slick";
-import Link from 'next/link'
-import {illustrations} from '@/api/illustrationData'
-import { web } from '@/api/webData'
+import Link from 'next/link';
+import {illustrations} from '@/api/illustrationData';
+import { web } from '@/api/webData';
+import { formations } from '@/api/formationsData';
+import { logos } from '@/api/logosData';
 
 
 const Portfolio = () => {
@@ -47,7 +49,7 @@ const Portfolio = () => {
                     objectFit='contain'
                   /> 
                   <div className="ModalSlick__Infos">
-                      {item.link != 'false' ? <p><Link href={item.name} passHref><a target="_blank">{item.link}</a></Link></p> : item.name } 
+                      {item.link != 'false' ? <p><Link href={item.link} passHref><a target="_blank">{item.link}</a></Link></p> : item.name } 
                       <p>{item.description}</p>
                   </div>
                 </div>
@@ -101,7 +103,7 @@ const Portfolio = () => {
 
         <div className='Card'>
           <div className='PortfolioCard__Preview' 
-          
+            onClick={() => {setIsOpen(!isOpen), setDatasForModal(logos)}}
             onMouseEnter={() => setPreviewHover('logo')} 
             onMouseLeave={() => setPreviewHover('')}>
             {previewHover === 'logo' ? (
@@ -121,19 +123,20 @@ const Portfolio = () => {
 
         <div className='Card'>
           <div className='PortfolioCard__Preview' 
+            onClick={() => {setIsOpen(!isOpen), setDatasForModal(formations)}}
             onMouseEnter={() => setPreviewHover('composant')} 
             onMouseLeave={() => setPreviewHover('')}>
             {previewHover === 'composant' ? (
               <Image 
                 className={`${previewHover === 'composant' ? 'blurOut': 'blurIn'}`}
-                src={`${router.basePath}/media/composants/composant-Vallena.svg`} 
+                src={`${router.basePath}/media/formations/NB_Certification_Inté_FRONT.jpg`} 
                 alt={'test'}
                 priority
                 layout='fill'
                 objectFit='cover'
               />
               ) : (
-              <h4 className={`${previewHover === 'composant' ? 'blurIn': 'blurOut'}`} >Composants</h4>
+              <h4 className={`${previewHover === 'composant' ? 'blurIn': 'blurOut'}`} >Formations</h4>
             )}
           </div>
         </div>

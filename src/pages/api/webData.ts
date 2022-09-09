@@ -9,7 +9,7 @@ const web = [
   },
   {
     "name": "ffmi",
-    "link": "https://www.aleph-ecriture.fr/",
+    "link": "https://www.ffmi.asso.fr/",
     "description": "Contribution au projet FFMI - WordPress / PHP / CSS / JavaScript",
     "src": "/media/web/ffmi.jpg"
   },

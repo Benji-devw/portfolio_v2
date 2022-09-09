@@ -63,13 +63,3 @@
 
 
 
-@media screen and (max-width: 600px) {
-  .Modal__Infos {
-    bottom: -10%;
-    width: 80%;
-  }
-  .slick-arrow  {
-    top: 65%;
-    height: 50px;
-  }
-}

@@ -2,39 +2,52 @@
 
 const illustrations = [
   {
-    "name": "design",
-    "description": "Enrichissez vos dessins et peintures avec des palettes de couleurs tirées des derniers projets.",
+    "name": "Photoshop",
+    "link": "false",
+    "description": "",
     "src": "/media/illustrations/Design-Orange.jpg"
   },
   {
-    "name": "design",
-    "description": "Enrichissez vos dessins et peintures avec des palettes de couleurs tirées des derniers projets.",
+    "name": "Illustrator",
+    "link": "false",
+    "description": "",
     "src": "/media/illustrations/Background-Illustration.jpg"
   },
   {
-    "name": "design",
-    "description": "Enrichissez vos dessins et peintures avec des palettes de couleurs tirées des derniers projets.",
+    "name": "Illustrator",
+    "link": "false",
+    "description": "",
     "src": "/media/illustrations/Planete-Illustration.jpg"
   },
   {
-    "name": "design",
-    "description": "Enrichissez vos dessins et peintures avec des palettes de couleurs tirées des derniers projets.",
+    "name": "Photoshop",
+    "link": "false",
+    "description": "",
     "src": "/media/illustrations/Wave-Purple.jpg"
   },
   {
-    "name": "design",
-    "description": "Enrichissez vos dessins et peintures avec des palettes de couleurs tirées des derniers projets.",
+    "name": "Photoshop",
+    "link": "false",
+    "description": "",
     "src": "/media/illustrations/Femme-Soie.jpg"
   },
   {
-    "name": "design",
-    "description": "Enrichissez vos dessins et peintures avec des palettes de couleurs tirées des derniers projets.",
+    "name": "Photoshop",
+    "link": "false",
+    "description": "",
     "src": "/media/illustrations/Text-Destructuré.jpg"
   },
   {
-    "name": "design",
-    "description": "Enrichissez vos dessins et peintures avec des palettes de couleurs tirées des derniers projets.",
+    "name": "Photoshop",
+    "link": "false",
+    "description": "",
     "src": "/media/illustrations/egle-Destructure.jpg"
+  },
+  {
+    "name": "Illustrator",
+    "link": "false",
+    "description": "",
+    "src": "/media/illustrations/Costum.svg"
   }
 ]
 export { illustrations };
