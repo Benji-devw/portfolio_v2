@@ -10,16 +10,17 @@ const WebArea = () => {
     dots: false,
     infinite: true,
     slidesToShow: 8,
-    slidesToScroll: 2,
+    slidesToScroll: 18,
     autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 2000,
+    speed: 20000,
+    // autoplaySpeed: 0.1,
+    cssEase: "linear",
     responsive: [
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToScroll: 18,
           infinite: true,
           dots: false
         }

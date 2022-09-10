@@ -1,5 +1,4 @@
 #Portfolio {
-  /* min-height: 200vh; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,7 +10,6 @@
   justify-content: center;
   flex-wrap: wrap;
   margin: 3rem 0;
-  /* max-width: 800px; */
 }
 
 #Portfolio .Card {
@@ -42,73 +40,12 @@
 
 
 
-.ModalSlick__Container {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 2rem;
-  width: 100%;
-}
-.ModalSlick__SlideCard {
-  position: relative;
-  width: 400px;
-  height: 450px;
-  /* margin-bottom: 5rem; */
-
-}
- .slick-slide img {
-  cursor: grab;
- }
- .slick-slide {
-  padding: 0 0 6rem 0;
-}
-.slick-arrow  {
-  position: absolute;
-  z-index: 200;
-  height: 100%;
-  width: 100px !important;
-}
-.slick-prev {
-  position: absolute;
-  /* background: url('/media/arrow.svg') no-repeat; */
-}
-.slick-next {
-  position: absolute;
-  /* background: url('/media/arrow.svg') no-repeat; */
-}
 
 
-
-
-
-
-
-.ModalSlick__Infos {
-  position: absolute;
-  z-index: 100;
-  bottom: -30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60%;
-  padding: .5rem;
-  backdrop-filter: blur(10px);
-  border-radius: 10px;
-  box-shadow: var(--b-shadow);
-}
 
 
 @media screen and (max-width: 600px) {
   #Portfolio .grid-container {
-    /* width: 100%; */
-    padding: 0;
-  }
-  .ModalSlick__Infos {
-    bottom: -10%;
-    width: 80%;
-  }
-  .slick-arrow  {
-    top: 65%;
-    height: 50px;
+    width: 300px;
   }
 }

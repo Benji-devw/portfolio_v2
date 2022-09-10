@@ -6,15 +6,16 @@
 #SkillsArea h3 {
   position: relative;
   cursor: pointer;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
 #SkillsArea h3::after {
   content: '';
   position: absolute;
   right: 0;
-  top: 0;
+  top: 50%;
   background-color: var(--main-blue);
   height: 2px;
-  width: 40px;
+  width: 30px;
 }
 .design { color: var(--main-blue); }
 .programmation { color: var(--main-violet); }
@@ -70,11 +71,18 @@
 
 
 
-#SkillsArea .Skills_Left {
+
+
+
+
+
+
+.Skills_Left {
   width: 40%;
   position: relative;
+  padding: 1rem;
 }
-#SkillsArea .SkillsLeft_Content {
+.SkillsLeft_Content {
   position: sticky;
   left: 0;
   top: 0;
@@ -84,6 +92,78 @@
   align-items: center;
   justify-content: center;
 } 
+
+
+.SkillsLeft_Content .circleBack {
+  max-width: 800px;
+  min-width: 400px;
+  -webkit-transform: rotateX(-70deg) rotateY(0deg) translateY(0px) translateZ(70px) scale(1) skewX(27deg) skewY(-30deg);
+  -moz-transform: rotateX(-70deg) rotateY(0deg) translateY(0px) translateZ(70px) scale(1) skewX(27deg) skewY(-30deg);
+  -ms-transform: rotateX(-70deg) rotateY(0deg) translateY(0px) translateZ(70px) scale(1) skewX(27deg) skewY(-30deg);
+  -o-transform: rotateX(-70deg) rotateY(0deg) translateY(0px) translateZ(70px) scale(1) skewX(27deg) skewY(-30deg);
+  transform:  rotateX(-70deg) rotateY(0deg) translateY(50px) translateZ(70px) scale(1) skewX(0deg) skewY(-0deg);
+
+}
+.SkillsLeft_Content .Skills_st1 {
+  fill: var(--main-dark);
+  stroke: var(--main-blue);
+  stroke-width: .5;
+  filter: drop-shadow(-5px 15px 3px rgb(0 0 0 / 0.6))
+}
+
+.SkillsLeft_Content .Skills_st2 {
+  filter: opacity(.05) blur(8px);
+  fill: var(--main-blue);
+}
+.Skills_st2__Bleu {fill: var(--main-blue) !important;}
+.Skills_st2__Violet {fill: var(--main-violet) !important;}
+.Skills_st2__Magenta {fill: var(--main-magenta) !important;}
+.Skills_st1__Blue {stroke: var(--main-blue) !important;}
+.Skills_st1__Violet {stroke: var(--main-violet) !important;}
+.Skills_st1__Magenta {stroke: var(--main-magenta) !important;}
+
+.SkillsLeft__Images {
+  position: absolute;
+  z-index: 50;
+  top: 37%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  display: grid;
+  grid-template-areas: "overlay";
+
+}
+.SkillsLeft__Images > span {
+  grid-area: overlay;
+}
+.SkillsLeft__Images > div {
+  grid-area: overlay;
+}
+/* .SkillsLeft__Images > span:nth-child(1) {
+  left: 20%;
+  top: -30%;
+}
+.SkillsLeft__Images > span:nth-child(2) {
+  left: -60%;
+  top: -40%;
+}
+.SkillsLeft__Images > span:nth-child(3) {
+  left: 30%;
+  top: -20%;
+}
+.SkillsLeft__Images > span:nth-child(4) {
+  left: -60%;
+  top: 20%;
+} */
+
+
+
+
+
+
+
+
 
 
 
@@ -107,6 +187,8 @@
 #SkillsArea .SkillsRight_Container p {
   margin: 0 1rem ;
 }
+
+
 
 
 
@@ -142,6 +224,4 @@
     height: 50vh;
     max-width: 100%;
   }
-
-
 }

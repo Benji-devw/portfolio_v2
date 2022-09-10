@@ -43,14 +43,30 @@
 
 
 
-
-.st1 {
+.Services__Item .st1 {
   fill: var(--main-dark);
-  stroke: var(--main-light);
-  stroke-width:1;
-  stroke-miterlimit:10;
+  stroke-width: .5;
+  filter: drop-shadow(10px 10px 5px rgb(0 0 0 / 0.4))
 }
-.st2_Brush, .st3_Brush {
+
+.Services__Item .st2_Brush {
+  filter: opacity(.03) blur(5px);
+  fill: var(--main-blue);
+}
+.Services__Item .st2_Code {
+  filter: opacity(.03) blur(5px);
+  fill: var(--main-violet);
+}
+.Services__Item .st2_backend {
+  filter: opacity(.03) blur(5px);
+  fill: var(--main-violet);
+/* color: #bf04b379; */
+}
+
+
+
+
+/* .st2_Brush, .st3_Brush {
   fill: none;
   stroke: var(--main-blue);
 }
@@ -65,7 +81,7 @@
 
 .svgCircle__Animate {
   transition-duration: .5s;
-}
+} */
 /* @keyframes pulse {
   from { opacity: 1; }
   to { opacity: 0; }
@@ -75,13 +91,13 @@
 
 
 
-.Brush span {
+.Fontend span {
   background: var(--main-blue);
   background-clip: text;
   -webkit-text-stroke: 1px transparent;
   color: var(--main-dark);
 }
-.st_Brush {
+.st_Fontend {
   fill:none;
   stroke:var(--main-blue);
   stroke-width:2;

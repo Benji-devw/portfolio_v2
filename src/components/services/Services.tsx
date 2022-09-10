@@ -4,6 +4,14 @@ import { useState, useEffect, useRef } from 'react';
 const Services = () => {
   const iconsRef = useRef<HTMLDivElement>(null)
   const [iconsIsVisible, setIconsIsVisible] = useState(false)
+  const [scrolled, setScrolled] = useState(0)
+
+  const listenToScroll = () => {
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = document.body.scrollTop || document.documentElement.scrollTop;
+    // const scrolled = rootRef.current?.offsetHeight || document.documentElement.scrollTop / height;
+    setScrolled(scrolled)
+  }
   
   useEffect(() => {
     if (!iconsRef.current) throw Error("divRef is not assigned");
@@ -13,8 +21,12 @@ const Services = () => {
       // console.log('entry', entry);
     })
     observer.observe(iconsRef.current)
+
+    window.addEventListener("scroll", listenToScroll);
+    return () => window.removeEventListener("scroll", listenToScroll)
   }, []);
 
+  // console.log(scrolled);
   
 
   return (
@@ -24,18 +36,21 @@ const Services = () => {
         
         <div className="Services__Item Brush">
           <svg id="Icons"  xmlns="http://www.w3.org/2000/svg" fill='none' preserveAspectRatio='none' viewBox="0 0 300 300">
-            <g id="Brush">
-              <circle className={`st3 st3_Brush ${iconsIsVisible && 'svgCircle__Animate'}`} cx="150" cy={150 } r={iconsIsVisible ? 125 : 80}/>
-              <circle className={`st2 st2_Brush ${iconsIsVisible && 'svgCircle__Animate'}`} cx="150" cy={150} r={iconsIsVisible ? 132 : 20} />
-              <circle className={`st1`} cx="150" cy="150" r="115"/>
+            <g id="Fontend">
+              <circle className="st2_Brush" cx="130" cy="130" r="125"/>
+              <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1='260' y1="315" x2={scrolled / 4} y2="33">
+                <stop  offset="0.8" style={{stopColor:'##0e0e0e'}}/>
+                <stop  offset="1" style={{stopColor:'#0785F2'}}/>
+              </linearGradient>
+              <circle className="st1" cx="150" cy="150" r="135"  stroke='url(#SVGID_1_)'/>
             </g>
             <g>
-              <path className={`st_Brush ${iconsIsVisible && 'svgPath__Animate'}`} d="M77.8,205.2c0.3-2.3,8.7-0.8,20.6-13.5c7-7.5,4.8-15.8,12.3-19.6c6.7-3.4,16.3-0.8,21.9,4.6 c7.9,7.6,11.4,24.5,3.5,29.2C116.6,217.3,77.3,208.8,77.8,205.2z"/>
-              <path className={`st_Brush ${iconsIsVisible && 'svgPath__Animate'}`} d="M105.6,192.3c-0.6-0.8,0.7-8.9,3.9-13.3c7.6-10.3,23,1.6,23,4.7c0,2.1-3.4,1.1-8.5,0.4 c-4.7-0.7-8.6-1.2-12.6,2.1C107.2,189.8,106.2,193,105.6,192.3z"/>
-              <path className={`st_Brush ${iconsIsVisible && 'svgPath__Animate'}`} d="M221.8,88.8c-3.1-3.1-24,12.6-46.6,35.2c-10.2,10.2-19,20.1-25.4,28.1l-0.5-0.5c-0.5-0.5-1.3-0.5-1.8,0 L133,166.2c-0.5,0.5-0.5,1.3,0,1.8l10,10c0.5,0.5,1.3,0.5,1.8,0l14.6-14.6c0.5-0.5,0.5-1.3,0-1.8l-0.9-0.9 c8-6.3,17.9-15.1,28.1-25.4C209.2,112.8,224.9,91.9,221.8,88.8z"/>
-              <line className={`st_Brush ${iconsIsVisible && 'svgPath__Animate'}`} x1="157.2" y1="149.4" x2="161.2" y2="153.4"/>
-              <line className={`st_Brush ${iconsIsVisible && 'svgPath__Animate'}`} x1="163.7" y1="142.8" x2="167.8" y2="146.8"/>
-              <line className={`st_Brush ${iconsIsVisible && 'svgPath__Animate'}`} x1="159" y1="144.7" x2="165.9" y2="151.5"/>
+              <path className={`st_Fontend ${iconsIsVisible && 'svgPath__Animate'}`} d="M77.8,205.2c0.3-2.3,8.7-0.8,20.6-13.5c7-7.5,4.8-15.8,12.3-19.6c6.7-3.4,16.3-0.8,21.9,4.6 c7.9,7.6,11.4,24.5,3.5,29.2C116.6,217.3,77.3,208.8,77.8,205.2z"/>
+              <path className={`st_Fontend ${iconsIsVisible && 'svgPath__Animate'}`} d="M105.6,192.3c-0.6-0.8,0.7-8.9,3.9-13.3c7.6-10.3,23,1.6,23,4.7c0,2.1-3.4,1.1-8.5,0.4 c-4.7-0.7-8.6-1.2-12.6,2.1C107.2,189.8,106.2,193,105.6,192.3z"/>
+              <path className={`st_Fontend ${iconsIsVisible && 'svgPath__Animate'}`} d="M221.8,88.8c-3.1-3.1-24,12.6-46.6,35.2c-10.2,10.2-19,20.1-25.4,28.1l-0.5-0.5c-0.5-0.5-1.3-0.5-1.8,0 L133,166.2c-0.5,0.5-0.5,1.3,0,1.8l10,10c0.5,0.5,1.3,0.5,1.8,0l14.6-14.6c0.5-0.5,0.5-1.3,0-1.8l-0.9-0.9 c8-6.3,17.9-15.1,28.1-25.4C209.2,112.8,224.9,91.9,221.8,88.8z"/>
+              <line className={`st_Fontend ${iconsIsVisible && 'svgPath__Animate'}`} x1="157.2" y1="149.4" x2="161.2" y2="153.4"/>
+              <line className={`st_Fontend ${iconsIsVisible && 'svgPath__Animate'}`} x1="163.7" y1="142.8" x2="167.8" y2="146.8"/>
+              <line className={`st_Fontend ${iconsIsVisible && 'svgPath__Animate'}`} x1="159" y1="144.7" x2="165.9" y2="151.5"/>
             </g>
           </svg>
           <div className={`description textBrush__Animate ${iconsIsVisible ? 'blurOut' : 'blurIn'}`}>
@@ -50,9 +65,12 @@ const Services = () => {
           <svg id="Icons"  xmlns="http://www.w3.org/2000/svg" fill='none' preserveAspectRatio='none' viewBox="0 0 300 300">
             <g id="Code">
               <g>
-              <circle className={`st3 st3_Code ${iconsIsVisible && 'svgCircle__Animate'}`} cx="150" cy={150 } r={iconsIsVisible ? 125 : 80}/>
-              <circle className={`st2 st2_Code ${iconsIsVisible && 'svgCircle__Animate'}`} cx="150" cy={150} r={iconsIsVisible ? 132 : 20} />
-                <circle className={`st1`} cx="150" cy="150" r="115"/>
+                <circle className="st2_Code" cx="130" cy="130" r="125"/>
+                <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="260" y1="315" x2={scrolled / 4} y2="63">
+                  <stop  offset="0.8" style={{stopColor:'#0e0e0e'}}/>
+                  <stop  offset="1" style={{stopColor:'#7328F7'}}/>
+                </linearGradient>
+                <circle className="st1" cx="150" cy="150" r="135"  stroke='url(#SVGID_2_)'/>
               </g>
               <g>
                 <line className={`st_Code ${iconsIsVisible && 'svgPath__Animate'}`} x1="96.3" y1="97.2" x2="121.9" y2="97.2"/>
@@ -104,9 +122,12 @@ const Services = () => {
           <svg id="Icons"  xmlns="http://www.w3.org/2000/svg" fill='none' preserveAspectRatio='none' viewBox="0 0 300 300">
             <g id="Backend">
               <g>
-              <circle className={`st3 st3_Backend ${iconsIsVisible && 'svgCircle__Animate'}`} cx="150" cy={150 } r={iconsIsVisible ? 125 : 80}/>
-              <circle className={`st2 st2_Backend ${iconsIsVisible && 'svgCircle__Animate'}`} cx="150" cy={150} r={iconsIsVisible ? 132 : 20} />
-                <circle className={`st1`} cx="150" cy="150" r="115"/>
+                <linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="260" y1="315" x2={scrolled / 4} y2="63">
+                  <stop  offset="0.8" style={{stopColor:'#0e0e0e'}}/>
+                  <stop  offset="1" style={{stopColor:'#BF04B3'}}/>
+                </linearGradient>
+                <circle className="st2_Code" cx="130" cy="130" r="125"/>
+                <circle className="st1" cx="150" cy="150" r="135"  stroke='url(#SVGID_3_)'/>
               </g>
               <g>
                 <path className={`st_Backend ${iconsIsVisible && 'svgPath__Animate'}`} d="M68.4,140.7h46.8c6.3,0,12.3-2.5,16.7-6.9l6.7-6.7c4.4-4.4,10.4-6.9,16.7-6.9h44.1"/>
@@ -122,7 +143,6 @@ const Services = () => {
               </g>
             </g>
           </svg>
-          {/* <code className={`textBackend__Animate ${iconsIsVisible ? 'blurOut' : 'blurIn'}`}><span>B</span>ACKEND</code> */}
           <div className={`description textBackend__Animate ${iconsIsVisible ? 'blurOut' : 'blurIn'}`}>
             <code ><span>B</span>ACKEND</code>
             <p>Une maitrise indispensable des outils backend pour des projets de toutes tailles (Nodejs, MongoDB, Nosql ...)</p>

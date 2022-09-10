@@ -20,22 +20,6 @@
   clip-path: var(--slice-0);
 }
 
-
-
-.Modal__Close {
-  position: fixed;
-  z-index: 200;
-  top: 2rem;
-  right: 5rem;
-  color: #fff;
-  cursor: pointer;
-  transform: scale(0);
-  animation: zoomIn .2s .4s cubic-bezier(0.2, 0.840, 0.440, 1.000) forwards;
-}
-
-
-
-
 @keyframes modalBlur {
   0% {
     clip-path: var(--slice-3);
@@ -60,6 +44,80 @@
 }
 
 
+.Modal__Close {
+  position: fixed;
+  z-index: 200;
+  top: 2rem;
+  right: 5rem;
+  color: #fff;
+  cursor: pointer;
+  transform: scale(0);
+  animation: zoomIn .2s .4s cubic-bezier(0.2, 0.840, 0.440, 1.000) forwards;
+}
 
 
 
+
+
+
+
+
+.Modal__Wrapper .ModalSlick__Container {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+  width: 100%;
+}
+.Modal__Wrapper .ModalSlick__SlideCard {
+  position: relative;
+  width: 400px;
+  height: 450px;
+}
+.Modal__Wrapper .slick-slide img {
+  cursor: grab;
+ }
+.Modal__Wrapper .slick-slide {
+  padding: 0 0 6rem 0;
+}
+.Modal__Wrapper .slick-arrow  {
+  position: absolute;
+  z-index: 200;
+  height: 100%;
+  width: 100px !important;
+}
+.Modal__Wrapper .slick-prev {
+  position: absolute;
+  /* background: url('/media/arrow.svg') no-repeat; */
+}
+.Modal__Wrapper .slick-next {
+  position: absolute;
+  /* background: url('/media/arrow.svg') no-repeat; */
+}
+
+
+.Modal__Wrapper .ModalSlick__Infos {
+  position: absolute;
+  z-index: 100;
+  bottom: -30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  padding: .5rem;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: var(--b-shadow);
+}
+
+
+@media screen and (max-width: 600px) {
+  .Modal__Wrapper .ModalSlick__Infos {
+    bottom: -10% !important;
+    width: 80% !important;
+  }
+  .Modal__Wrapper .slick-arrow  {
+    top: 65%;
+    height: 50px;
+  }
+}
