@@ -1,5 +1,5 @@
 #Footer {
-  padding: 2rem;
+  /* padding: 2rem; */
   display: flex;
   text-align: center;
   justify-content: center;
@@ -9,8 +9,8 @@
   max-width: 80vw;
   position: relative;
   display: flex;
-  text-align: center;
-  justify-content: center;
+  /* text-align: center; */
+  /* justify-content: center; */
   border-top: 1px solid var(--main-blue);
 
 }
@@ -43,27 +43,32 @@
 
 .footer_left {
   text-align: left;
+  width: 60%;
 }
 
 .footer_middle {
   display: flex;
   align-items: flex-end;
-  justify-content: center;
+  justify-content: left;
+  text-align: left;
 }
 
 .footer_right {
   display: flex;
   align-items: flex-end;
-  justify-content: center;
+  justify-content: left;
 
 }
-.footer_right .Footer_Network {
-  width: 75px;
+.footer_right .Footer_Link {
+  margin-right: 1rem;
 }
 .footer_right .Footer_Network span {
   cursor: pointer;
 
 }
+
+
+
 
 
 
@@ -84,5 +89,8 @@
 @media screen and (max-width: 900px) {
   #Footer .Footer__Grid {
     flex-direction: column;
+  }
+  .footer_left {
+    width: 100%;
   }
 }

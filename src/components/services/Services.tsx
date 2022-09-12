@@ -38,7 +38,7 @@ const Services = () => {
           <svg id="Icons"  xmlns="http://www.w3.org/2000/svg" fill='none' preserveAspectRatio='none' viewBox="0 0 300 300">
             <g id="Fontend">
               <circle className="st2_Brush" cx="130" cy="130" r="125"/>
-              <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1='260' y1="315" x2={scrolled / 4} y2="33">
+              <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1='260' y1="115" x2={scrolled / 4} y2="33">
                 <stop  offset="0.8" style={{stopColor:'##0e0e0e'}}/>
                 <stop  offset="1" style={{stopColor:'#0785F2'}}/>
               </linearGradient>

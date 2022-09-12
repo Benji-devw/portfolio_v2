@@ -1,6 +1,7 @@
 import { ReactNode, useEffect, useState } from 'react';
 import Head from 'next/head'
 import { Footer } from '@/components/ui/Footer'
+import { Contact } from '@/components/ui/Contact';
 
 type ILayoutProps = {
   children?: ReactNode | undefined;
@@ -20,6 +21,7 @@ export default function Layout({ children }: ILayoutProps) {
       </Head>
 
       {/* <Navbar /> */}
+      <Contact />
       <main role='document' className={`container Main__Wrapper fadeIn`}>
         {children}
       </main>

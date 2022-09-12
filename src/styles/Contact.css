@@ -1,0 +1,121 @@
+
+#Contact .Contact__Form {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 300;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0,0,0,.4);
+  border-radius: 10px;
+  border: 1px solid var(--main-blue);
+  padding: 1rem;
+  box-shadow: var(--main-shadow);
+  min-width: 250px;
+}
+
+
+
+#Contact .Contact__Form form {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+#Contact .Contact__Form form > :nth-child(n) {
+  margin: .3rem;
+  font-size: 1rem;
+  outline: none;
+}
+#Contact .Contact__Form input {
+  border-radius: 100px;
+  border: 1px solid var(--main-blue);
+  padding: .3rem;
+  padding: .5rem;
+}
+#Contact .Contact__Form textarea {
+  border-radius: 20px;
+  border: 1px solid var(--main-blue);
+  min-width: 330px;
+  min-height: 150px;
+  padding: .5rem;
+}
+
+
+
+
+
+.g-recaptcha {
+  height: 80px;
+}
+
+
+
+
+
+
+
+#Contact .OpenContact__Btn {
+  position: fixed;
+  bottom: -3rem;
+  right: 1rem;
+  z-index: 800;
+  cursor: pointer;
+  transition-duration: .3s;
+}
+#Contact .OpenContact__Btn:hover {
+  bottom: 0rem;
+  transition-duration: .3s;
+}
+
+
+
+
+
+.ContactOpen__Animate {
+  backdrop-filter: blur(10px);
+  background-color: rgba(0,0,0,.4);
+
+  animation: .4s modalBlur;
+  animation-timing-function: steps(2, end);
+  --slice-0: inset(0% 0% 0% 0%);
+  --slice-1: inset(60% 20% 25% 10%);
+  --slice-2: inset(50% -6px 45% 45%);
+  --slice-3: inset(70% 20% 25% 10%);
+  clip-path: var(--slice-0);
+}
+
+@keyframes modalBlur {
+  0% {
+    clip-path: var(--slice-3);
+    transform: translate(30%, -40%);
+  }
+  30% {
+    clip-path: var(--slice-1);
+    transform: translate(-20%, 10%);
+  }
+  60% {
+    clip-path: var(--slice-2);
+    transform: translate(-30%, -20%);
+  }
+  80% {
+    clip-path: var(--slice-1);
+    transform: translate(0px, 0px);
+  }
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+  #Contact .Contact__Form {
+    position: fixed;
+    width: 80vw;
+  }
+  #Contact .Contact__Form input {
+    padding: .1rem;
+  }
+  #Contact .Contact__Form textarea {
+    max-width: 100%;
+    min-width: 200px;
+  }
+}

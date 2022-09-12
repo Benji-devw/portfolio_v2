@@ -5,6 +5,7 @@
 
 #SkillsArea h3 {
   position: relative;
+  z-index: 150;
   cursor: pointer;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
@@ -115,12 +116,13 @@
   filter: opacity(.05) blur(8px);
   fill: var(--main-blue);
 }
-.Skills_st2__Bleu {fill: var(--main-blue) !important;}
+.Skills_st2__Blue {fill: var(--main-blue) !important;}
 .Skills_st2__Violet {fill: var(--main-violet) !important;}
 .Skills_st2__Magenta {fill: var(--main-magenta) !important;}
 .Skills_st1__Blue {stroke: var(--main-blue) !important;}
 .Skills_st1__Violet {stroke: var(--main-violet) !important;}
 .Skills_st1__Magenta {stroke: var(--main-magenta) !important;}
+
 
 .SkillsLeft__Images {
   position: absolute;
@@ -179,15 +181,24 @@
   flex: 1;
 }
 #SkillsArea .SkillsRight_Container {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   max-width: 80%;
 } 
 #SkillsArea .SkillsRight_Container p {
+  /* font-size: ; */
   margin: 0 1rem ;
 }
-
+#SkillsArea .SkillsRight__Images {
+  position: relative;
+  z-index: 50;
+  /* top: 37%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  width: 350px;
+  height: 350px;
+}
 
 
 
@@ -221,7 +232,16 @@
     padding-bottom: 8rem;
   }
   #SkillsArea .SkillsRight_Container {
-    height: 50vh;
+    flex-direction: column;
+    /* height: 50vh; */
     max-width: 100%;
+    padding: 3rem 0;
+  }
+}
+
+
+@media screen and (min-width: 1800px) {
+  #SkillsArea .Skills_Right {
+    padding: 0rem 0 5rem 0;
   }
 }

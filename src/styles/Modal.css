@@ -7,8 +7,8 @@
   bottom: 0;
   overflow-y: auto;
   overflow-x: hidden;
-  backdrop-filter: blur(10px);
 
+  backdrop-filter: blur(10px);
   background-color: rgba(0,0,0,.4);
 
   animation: .4s modalBlur;
