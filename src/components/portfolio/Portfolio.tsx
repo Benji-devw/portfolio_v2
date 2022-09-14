@@ -36,7 +36,14 @@ const Portfolio = () => {
 
           {isOpen && (
             <Modal>
-              <div className="Modal__Close" onClick={() => {setIsOpen(false)} }>CLOSE</div>
+              <div className="Modal__Close" onClick={() => {setIsOpen(false)} }>
+                <svg id="Close" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio='none' viewBox="0 0 150 150">
+                  <path className="st110" d="M91.75,15.69L15.69,91.75c-2.06,2.06-5.39,2.06-7.44,0l0,0c-2.06-2.06-2.06-5.39,0-7.44L84.31,8.25
+                    c2.06-2.06,5.39-2.06,7.44,0l0,0C93.81,10.3,93.81,13.63,91.75,15.69z"/>
+                  <path className="st111" d="M84.31,91.75L8.25,15.69c-2.06-2.06-2.06-5.39,0-7.44l0,0c2.06-2.06,5.39-2.06,7.44,0l76.07,76.07
+                    c2.06,2.06,2.06,5.39,0,7.44l0,0C89.7,93.81,86.37,93.81,84.31,91.75z"/>
+                </svg>
+              </div>
               <div className="ModalSlick__Container">
               <Slider {...reactSlickSettings}>
                 {datasForModal.map((item: any, id: any) => 
@@ -49,7 +56,7 @@ const Portfolio = () => {
                     objectFit='contain'
                   /> 
                   <div className="ModalSlick__Infos">
-                      {item.link != 'false' ? <p><Link href={item.link} passHref><a target="_blank">{item.link}</a></Link></p> : item.name } 
+                      {item.link != 'false' ? <p><Link href={item.link} passHref><a target="_blank">{item.name}</a></Link></p> : item.name } 
                       <p>{item.description}</p>
                   </div>
                 </div>

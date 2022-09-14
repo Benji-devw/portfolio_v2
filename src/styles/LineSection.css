@@ -15,10 +15,10 @@
   height: 2px;
   width: 0px;
   background-color: var(--main-blue);
-  border-radius: 5px;
+  border-radius: 15px;
 }
 .LineSection_Anim {
-  animation: LineAnim .5s linear forwards;
+  animation: LineAnim .5s ease-in-out forwards;
 }
 
 @keyframes LineAnim {
@@ -26,10 +26,10 @@
     width: 0px;
   }
   50% {
-    width: 147px;
+    width: 250px;
   }
   100% {
-    width: 100px;
+    width: 80px;
   }
 }
 

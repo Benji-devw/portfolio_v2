@@ -28,7 +28,6 @@
   "programmation":
   {
     "name": "programmation",
-    "description": "Enrichissez vos dessins et peintures avec des palettes de couleurs tirées des derniers projets.",
     "context": [
       {
         "classe": "collapse_Five",
@@ -55,12 +54,11 @@
   "backend":
   {
     "name": "backend",
-    "description": "Enrichissez vos dessins et peintures avec des palettes de couleurs tirées des derniers projets.",
     "context": [
       {
         "classe": "collapse_Nine",
         "title": "Le backend",
-        "desc": "La partie invisible est la plus importante pour la gestion des données. Savoir traiter et sécuriser des requêtes avec un serveur ou une API est toujours une procédure délicate."
+        "desc": "La partie invisible et la plus importante pour la gestion des données. Savoir traiter et sécuriser des requêtes avec un serveur ou une API est toujours une procédure délicate."
       },
       {
         "classe": "collapse_Ten",

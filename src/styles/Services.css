@@ -104,7 +104,7 @@
   stroke-miterlimit: 10;
   stroke-dasharray: 500;
   stroke-dashoffset: 500;
-  animation-delay: 1s !important;
+  animation-delay: .3s !important;
 }
 
 
@@ -120,7 +120,7 @@
   stroke-width:2;
   stroke-dasharray: 100;
   stroke-dashoffset: 100;
-  animation-delay: 2s !important;
+  animation-delay: 1.3s !important;
 }
 
 
@@ -136,7 +136,7 @@
   stroke-width:2;
   stroke-dasharray: 300;
   stroke-dashoffset: 300;
-  animation-delay: 3s !important;
+  animation-delay: 2.3s !important;
 }
 
 
@@ -144,13 +144,13 @@
   animation: dash 2s linear forwards;
 }
 .textBrush__Animate {
-  animation-delay: 1s;
+  animation-delay: 0s;
 }
 .textCode__Animate {
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .textBackend__Animate {
-  animation-delay: 3s;
+  animation-delay: 2s;
 }
 
 @keyframes dash {

@@ -41,7 +41,7 @@ const Contact = () => {
   }, [form]);
 
 
-  // console.log(openContact);
+  console.log(openContact);
   
   
   return (

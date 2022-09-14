@@ -44,10 +44,10 @@ const illustrations = [
     "src": "/media/illustrations/egle-Destructure.jpg"
   },
   {
-    "name": "Illustrator",
+    "name": "Photoshop",
     "link": "false",
     "description": "",
-    "src": "/media/illustrations/Costum.svg"
+    "src": "/media/illustrations/automne.jpg"
   }
 ]
 export { illustrations };
