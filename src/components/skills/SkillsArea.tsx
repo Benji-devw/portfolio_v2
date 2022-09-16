@@ -7,7 +7,6 @@ type IContextProps = {
   skill: ReactNode | any
 }
 
-
 const SkillsArea = ({skill}: IContextProps) => {
 
   const router = useRouter();
@@ -16,7 +15,7 @@ const SkillsArea = ({skill}: IContextProps) => {
   const [isVisible, setIsVisible] = useState(false)
   const [collapseOpen, setCollapseOpen] = useState('collapse_One')
   const [datas, setDatas] = useState([])
-  const [checkScreenW, setCheckScreenW] = useState(0)
+  const [checkScreenW, setCheckScreenW] = useState<any>(0)
   const [switchStickyImg, setSwitchStickyImg] = useState<any>(0)
   const [switchStickyClass, setswitchStickyClass] = useState(0)
   const [datasWait, setDatasWait] = useState(false)
@@ -48,8 +47,8 @@ const SkillsArea = ({skill}: IContextProps) => {
 
     if (datas.length === 0 && isVisible) {
       setTimeout(() => {
-        setDatasWait(true)
         setDatas(skill)
+        setDatasWait(true)
       }, 500);
     }
 
@@ -60,25 +59,20 @@ const SkillsArea = ({skill}: IContextProps) => {
     })
     observer.observe(rootRef.current!)
 
-    setCheckScreenW(window.screen.width)
+    setCheckScreenW(rootRef.current?.offsetWidth)
     return () => window.removeEventListener("scroll", listenToScroll)
   }, [scrolled, skill, checkScreenW, datas, isVisible, rootRef])
 
-
   
-  // console.log(datas.length);
-  // console.log(datas);
-  // console.log(datasWait);
-  // console.log(scrolled);
 
   return (
-    <div id='SkillsArea'>
+    <section id='Skills__Section'>
       <div ref={rootRef} className="Skills_Section">
 
-        {checkScreenW > 800 && 
+        {datasWait ? 
+          checkScreenW > 800 && 
           <div className="Skills_Left" style={{height: !datasWait ? '80vh' : ''}}>
 
-              {datasWait ? 
                 <div className="SkillsLeft_Content">
                     <div className='SkillsLeft__Images'>
                       <Image 
@@ -102,94 +96,87 @@ const SkillsArea = ({skill}: IContextProps) => {
                     </g>
                   </svg>
                 </div>
-              : <div className='dataWait'><div className='dataWait_picture'></div></div> 
-              }
           </div>
+        : <div className='dataWait'><div className='dataWait_picture'></div></div> 
         }
 
 
 
-        <div className="Skills_Right" style={{height: !datasWait ? '80vh' : ''}}>
-          {datasWait ? 
-            <div className={`SkillsRight_Content`}>
-            
-              <div className="SkillsRight_Text">
-                {checkScreenW < 800 && 
-                  <div className='SkillsRight__Images'>
-                      <Image src={`${router.basePath}/media/SkillsLeft__Frontend.svg`} 
-                        alt={'Frontend_img'} priority layout='fill' objectFit='contain'
-                      />
-                  </div>
-                }
-                  {Object.values(datas).map((value: any, id: number) => 
-                    value.name === "design" &&
-                      Object.values(value.context).map((val: any, id: number) => 
-                        <div className={`SkillsRight_Content`} key={id}>
-                          <h3 className={`${value.name} ${collapseOpen === `${val.classe}` ? 'Collpase__Opened' : 'Collpase__Closed'}`} 
-                            onClick={() => setCollapseOpen(`${val.classe}`)} 
-                          > {val.title} </h3>
-                          
-                          <div  className={`${val.classe}`} style={{height: collapseOpen === `${val.classe}` ? '150px' : '0px'}}>
-                            <p>{val.desc}</p>
+        {datasWait ? 
+          <div className="Skills_Right" style={{height: !datasWait ? '80vh' : ''}}>
+              <div className={`SkillsRight_Content`}>
+              
+                <div className="SkillsRight_Text">
+                    <div className='SkillsRight__Images'>
+                        <Image src={`${router.basePath}/media/SkillsLeft__Frontend.svg`} 
+                          alt={'Frontend_img'} priority layout='fill' objectFit='contain'
+                        />
+                    </div>
+                    {Object.values(datas).map((value: any, id: number) => 
+                      value.name === "design" &&
+                        Object.values(value.context).map((val: any, id: number) => 
+                          <div className={`SkillsRight_Content`} key={id}>
+                            <h3 className={`${value.name} ${collapseOpen === `${val.classe}` ? 'Collpase__Opened' : 'Collpase__Closed'}`} 
+                              onClick={() => setCollapseOpen(`${val.classe}`)} 
+                            > {val.title} </h3>
+                            
+                            <div  className={`${val.classe}`} style={{height: collapseOpen === `${val.classe}` ? '150px' : '0px'}}>
+                              <p>{val.desc}</p>
+                            </div>
                           </div>
-                        </div>
-                      )
+                        )
+                      )}
+                </div>
+                <div className="SkillsRight_Text">
+                    <div className='SkillsRight__Images'>
+                        <Image src={`${router.basePath}/media/SkillsLeft__Programmation.svg`} 
+                          alt={'Frontend_img'} priority layout='fill' objectFit='contain'
+                        />
+                    </div>
+                    {Object.values(datas).map((value: any, id: number) => 
+                      value.name === "programmation" && 
+                        Object.values(value.context).map((val: any, id: number) => 
+                          <div className={`SkillsRight_Content`} key={id}>
+                            <h3 className={`${value.name} ${collapseOpen === `${val.classe}` ? 'Collpase__Opened' : 'Collpase__Closed'}`} 
+                              onClick={() => setCollapseOpen(`${val.classe}`)} 
+                            > {val.title} </h3>
+                            
+                            <div className={val.classe} style={{height: collapseOpen === `${val.classe}` ? '130px' : '0px'}}>
+                              <p>{val.desc}</p>
+                            </div>
+                          </div>
+                        )
                     )}
-              </div>
-              <div className="SkillsRight_Text">
-              {checkScreenW < 800 && 
-                  <div className='SkillsRight__Images'>
-                      <Image src={`${router.basePath}/media/SkillsLeft__Programmation.svg`} 
-                        alt={'Frontend_img'} priority layout='fill' objectFit='contain'
-                      />
-                  </div>
-                }
-                  {Object.values(datas).map((value: any, id: number) => 
-                    value.name === "programmation" && 
-                      Object.values(value.context).map((val: any, id: number) => 
-                        <div className={`SkillsRight_Content`} key={id}>
-                          <h3 className={`${value.name} ${collapseOpen === `${val.classe}` ? 'Collpase__Opened' : 'Collpase__Closed'}`} 
-                            onClick={() => setCollapseOpen(`${val.classe}`)} 
-                          > {val.title} </h3>
-                          
-                          <div className={val.classe} style={{height: collapseOpen === `${val.classe}` ? '130px' : '0px'}}>
-                            <p>{val.desc}</p>
+                </div>
+                <div className="SkillsRight_Text">
+                    <div className='SkillsRight__Images'>
+                        <Image src={`${router.basePath}/media/SkillsLeft__Backend.svg`} 
+                          alt={'Frontend_img'} priority layout='fill' objectFit='contain'
+                        />
+                    </div>
+                    {Object.values(datas).map((value: any, id: number) => 
+                      value.name === "backend" && 
+                        Object.values(value.context).map((val: any, id: number) => 
+                          <div className={`SkillsRight_Content`} key={id}>
+                            <h3 className={`${value.name} ${collapseOpen === `${val.classe}` ? 'Collpase__Opened' : 'Collpase__Closed'}`} 
+                              onClick={() => setCollapseOpen(`${val.classe}`)} 
+                            > {val.title} </h3>
+                            
+                            <div className={val.classe} style={{height: collapseOpen === `${val.classe}` ? '130px' : '0px'}}>
+                              <p>{val.desc}</p>
+                            </div>
                           </div>
-                        </div>
-                      )
-                  )}
-              </div>
-              <div className="SkillsRight_Text">
-              {checkScreenW < 800 && 
-                  <div className='SkillsRight__Images'>
-                      <Image src={`${router.basePath}/media/SkillsLeft__Backend.svg`} 
-                        alt={'Frontend_img'} priority layout='fill' objectFit='contain'
-                      />
-                  </div>
-                }
-                  {Object.values(datas).map((value: any, id: number) => 
-                    value.name === "backend" && 
-                      Object.values(value.context).map((val: any, id: number) => 
-                        <div className={`SkillsRight_Content`} key={id}>
-                          <h3 className={`${value.name} ${collapseOpen === `${val.classe}` ? 'Collpase__Opened' : 'Collpase__Closed'}`} 
-                            onClick={() => setCollapseOpen(`${val.classe}`)} 
-                          > {val.title} </h3>
-                          
-                          <div className={val.classe} style={{height: collapseOpen === `${val.classe}` ? '130px' : '0px'}}>
-                            <p>{val.desc}</p>
-                          </div>
-                        </div>
-                      )
-                  )}
-              </div>
+                        )
+                    )}
+                </div>
 
-            </div>
-          : <div className='dataWait'><div className='dataWait_text'></div><div className='dataWait_text'></div><div className='dataWait_text'></div></div>
-          }
-        </div>
+              </div>
+          </div>
+        : <div className='dataWait'><div className='dataWait_text'></div><div className='dataWait_text'></div><div className='dataWait_text'></div></div>
+        }
       
       </div>
-    </div>
+    </section>
 
     );
 }

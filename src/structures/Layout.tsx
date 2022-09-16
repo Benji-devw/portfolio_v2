@@ -2,6 +2,7 @@ import { ReactNode, useEffect, useState } from 'react';
 import Head from 'next/head'
 import { Footer } from '@/components/ui/Footer'
 import { Contact } from '@/components/ui/Contact';
+import { NavFeatures } from '@/components/ui/navigation/Nav_Features'
 
 type ILayoutProps = {
   children?: ReactNode | undefined;
@@ -9,8 +10,6 @@ type ILayoutProps = {
 
 
 export default function Layout({ children }: ILayoutProps) {
-
-
   return (
     <>
       <Head>
@@ -20,7 +19,7 @@ export default function Layout({ children }: ILayoutProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* <Navbar /> */}
+      <NavFeatures />
       <Contact />
       <main role='document' className={`container Main__Wrapper fadeIn`}>
         {children}

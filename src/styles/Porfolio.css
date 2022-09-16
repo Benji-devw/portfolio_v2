@@ -1,18 +1,18 @@
-#Portfolio {
+#Portfolio__Section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-#Portfolio .grid-container {
+#Portfolio__Section .grid-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   margin: 3rem 0;
 }
 
-#Portfolio .Card {
+#Portfolio__Section .Card {
   overflow: hidden;
   margin: 0rem;
 
@@ -24,7 +24,7 @@
   height: 400px;
 }
 
-#Portfolio .PortfolioCard__Preview  {
+#Portfolio__Section .PortfolioCard__Preview  {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,6 +39,89 @@
 
 
 
+
+
+
+
+
+
+.Modal__Wrapper .ModalSlick__Container {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+  width: 100%;
+  /* height: 100%; */
+}
+.Modal__Wrapper .ModalSlick__SlideCard {
+  position: relative;
+  height: 450px;
+}
+
+.slick-list {
+  overflow: visible !important;
+}
+
+.Modal__Wrapper .slick-slide img {
+  cursor: grab;
+ }
+.Modal__Wrapper .slick-slide {
+  padding: 0 0 6rem 0;
+}
+
+
+.Modal__Wrapper .ModalSlick__Infos {
+  position: relative;
+  z-index: 100;
+  top: 120%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  /* box-shadow: var(--b-shadow); */
+  padding: 1rem;
+  min-height: 100px;
+}
+.Modal__Wrapper .ModalSlick__Infos a:hover {
+  color: var(--main-blue);
+}
+
+
+.Modal__Wrapper .slick-arrow  {
+  position: absolute;
+  z-index: 200;
+  height: 100%;
+  width: 100px !important;
+}
+.Modal__Wrapper .slick-prev {
+  position: absolute;
+  /* background: url('/media/arrow.svg') no-repeat; */
+}
+.Modal__Wrapper .slick-next {
+  position: absolute;
+  /* background: url('/media/arrow.svg') no-repeat; */
+}
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+  .Modal__Wrapper .ModalSlick__Infos {
+    top: 100% !important;
+    width: 90% !important;
+  }
+  .Modal__Wrapper .slick-arrow  {
+    top: 65%;
+    height: 50px;
+  }
+  .slick-list {
+    overflow: hidden !important;
+  }
+}
 
 
 

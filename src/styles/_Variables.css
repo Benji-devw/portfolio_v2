@@ -6,8 +6,16 @@
   --main-blue: #0785F2;
   --main-violet: #7328F7;
   --main-magenta: #BF04B3;
-  --main-dark: #0e0e0e;
+  --main-dark: #0b0b0b;
+  
+  --main-blue-alt: #076bc2;
+  --main-light-t: #f5f5f544;
+  --main-blue-t: #0784f244;
+  --main-violet-t: #7428f744;
+  --main-magenta-t: #bf04b344;
+  --main-dark-t: #0b0b0b44;
 
   --main-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+  --main-shadow-t: 3px 3px 10px rgba(0, 0, 0, .5);
   --b-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
 }

@@ -9,7 +9,6 @@ const Services = () => {
   const listenToScroll = () => {
     const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     const scrolled = document.body.scrollTop || document.documentElement.scrollTop;
-    // const scrolled = rootRef.current?.offsetHeight || document.documentElement.scrollTop / height;
     setScrolled(scrolled)
   }
   
@@ -18,7 +17,6 @@ const Services = () => {
     const observer = new IntersectionObserver((entries) => {
       const entry = entries[0]
       setIconsIsVisible(entry.isIntersecting)
-      // console.log('entry', entry);
     })
     observer.observe(iconsRef.current)
 
@@ -26,24 +24,22 @@ const Services = () => {
     return () => window.removeEventListener("scroll", listenToScroll)
   }, []);
 
-  // console.log(scrolled);
-  
 
   return (
-    <div id="Services">
+    <section id="Services__Section">
 
       <div ref={iconsRef} className="IconPath__Main">
         
         <div className="Services__Item Brush">
-          <svg id="Icons"  xmlns="http://www.w3.org/2000/svg" fill='none' preserveAspectRatio='none' viewBox="0 0 300 300">
-            <g id="Fontend">
+          <svg id="Icons"  xmlns="http://www.w3.org/2000/svg" fill='none' preserveAspectRatio='none' viewBox="0 0 300 300" height={250}>
+            {/* <g id="Fontend"> */}
               <circle className="st2_Brush" cx="130" cy="130" r="125"/>
               <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1='260' y1="115" x2={scrolled / 4} y2="33">
-                <stop  offset="0.8" style={{stopColor:'##0e0e0e'}}/>
+                <stop  offset="0.8" style={{stopColor:'#0b0b0b'}}/>
                 <stop  offset="1" style={{stopColor:'#0785F2'}}/>
               </linearGradient>
               <circle className="st1" cx="150" cy="150" r="135"  stroke='url(#SVGID_1_)'/>
-            </g>
+            {/* </g> */}
             <g>
               <path className={`st_Fontend ${iconsIsVisible && 'svgPath__Animate'}`} d="M77.8,205.2c0.3-2.3,8.7-0.8,20.6-13.5c7-7.5,4.8-15.8,12.3-19.6c6.7-3.4,16.3-0.8,21.9,4.6 c7.9,7.6,11.4,24.5,3.5,29.2C116.6,217.3,77.3,208.8,77.8,205.2z"/>
               <path className={`st_Fontend ${iconsIsVisible && 'svgPath__Animate'}`} d="M105.6,192.3c-0.6-0.8,0.7-8.9,3.9-13.3c7.6-10.3,23,1.6,23,4.7c0,2.1-3.4,1.1-8.5,0.4 c-4.7-0.7-8.6-1.2-12.6,2.1C107.2,189.8,106.2,193,105.6,192.3z"/>
@@ -55,19 +51,19 @@ const Services = () => {
           </svg>
           <div className={`description textBrush__Animate ${iconsIsVisible ? 'blurOut' : 'blurIn'}`}>
             <code ><span>F</span>ONTEND</code>
-            <p>Bonne maitrise des logiciels de graphisme pour une interface précise et sur mesure ...</p>
+            <p>Bonne maitrise des logiciels de graphisme pour une interface précise et sur mesure...</p>
           </div>
         </div>
 
 
 
         <div className="Services__Item Code">
-          <svg id="Icons"  xmlns="http://www.w3.org/2000/svg" fill='none' preserveAspectRatio='none' viewBox="0 0 300 300">
+          <svg id="Icons"  xmlns="http://www.w3.org/2000/svg" fill='none' preserveAspectRatio='none' viewBox="0 0 300 300"  height={250}>
             <g id="Code">
               <g>
                 <circle className="st2_Code" cx="130" cy="130" r="125"/>
                 <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="260" y1="315" x2={scrolled / 4} y2="63">
-                  <stop  offset="0.8" style={{stopColor:'#0e0e0e'}}/>
+                  <stop  offset="0.8" style={{stopColor:'#0b0b0b'}}/>
                   <stop  offset="1" style={{stopColor:'#7328F7'}}/>
                 </linearGradient>
                 <circle className="st1" cx="150" cy="150" r="135"  stroke='url(#SVGID_2_)'/>
@@ -113,17 +109,17 @@ const Services = () => {
           {/* <code className={`textCode__Animate ${iconsIsVisible ? 'blurOut' : 'blurIn'}`}><span>P</span>ROGRAMATION</code> */}
           <div className={`description textCode__Animate ${iconsIsVisible ? 'blurOut' : 'blurIn'}`}>
             <code ><span>P</span>ROGRAMATION</code>
-            <p>JavaScrip, mon langage favori ainsi que les frameworks (React, Nextjs ...)   </p>
+            <p>JavaScrip, mon langage favori ainsi que les frameworks (React, Nextjs...)   </p>
           </div>
         </div>
 
 
         <div className="Services__Item Backend">
-          <svg id="Icons"  xmlns="http://www.w3.org/2000/svg" fill='none' preserveAspectRatio='none' viewBox="0 0 300 300">
+          <svg id="Icons"  xmlns="http://www.w3.org/2000/svg" fill='none' preserveAspectRatio='none' viewBox="0 0 300 300"  height={250}>
             <g id="Backend">
               <g>
                 <linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="260" y1="315" x2={scrolled / 4} y2="63">
-                  <stop  offset="0.8" style={{stopColor:'#0e0e0e'}}/>
+                  <stop  offset="0.8" style={{stopColor:'#0b0b0b'}}/>
                   <stop  offset="1" style={{stopColor:'#BF04B3'}}/>
                 </linearGradient>
                 <circle className="st2_Code" cx="130" cy="130" r="125"/>
@@ -145,13 +141,13 @@ const Services = () => {
           </svg>
           <div className={`description textBackend__Animate ${iconsIsVisible ? 'blurOut' : 'blurIn'}`}>
             <code ><span>B</span>ACKEND</code>
-            <p>Une maitrise indispensable des outils backend pour des projets de toutes tailles (Nodejs, MongoDB, Nosql ...)</p>
+            <p>Une maitrise indispensable des outils backend pour des projets de toute taille (Nodejs, MongoDB, Nosql...)</p>
           </div>
         </div>
 
       </div>
 
-    </div>
+    </section>
     );
 }
 export { Services };

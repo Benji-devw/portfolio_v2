@@ -9,10 +9,11 @@
 @import './Modal.css';
 @import './Button.css';
 @import './Footer.css';
+@import './Nav.css';
 
 
 /* Features */
-@import './HeroTitle.css';
+@import './Hero.css';
 @import './Services.css';
 @import './Skills.css';
 @import './Porfolio.css';
@@ -52,7 +53,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: var(--main-dark);
   color: var(--main-light);
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 a {
@@ -105,66 +106,51 @@ h6 {
   color: var(--main-blue);
 }
 
-code {
-  font-size: 2.2rem;
-  text-align: center;
-  width: 100%;
-  background: var(--main-light);
-  background-clip: text;
-  -webkit-text-stroke: .8px transparent;
-  color: var(--main-dark);
-}
-/* button {
-  margin: 0 !important;
-  padding: 0 !important;
-  background-color: none !important;
-} */
 
 
 
-.Modal__Wrapper {
-  overflow: hidden;
-}
+
+
 
 .titleSection {
   position: relative;
+  /* margin-top: 2rem; */
 }
 .titleSection p {
   text-align: center;
-  margin-bottom: 3rem ;
+  margin-bottom: 3rem;
 }
-
 
 .Skills__Content .titleSection {
   z-index: 100;
-  top: 10rem;
+  top: 6rem;
 }
+
+
+
 
 
 .dataWait {
   position: relative;
   top: 5rem;
-  /* width: 50vw; */
-  /* height: 150vh; */
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
   margin: 2rem;
 }
 .dataWait_picture {
   position: relative;
   display: block;
-  height: 300px;
-  width: 300px;
+  height: 200px;
+  width: 200px;
   background-color: #0784f215;
 }
 .dataWait_text {
   display: block;
-  height: 30px;
-  width: 300px;
+  height: 20px;
+  width: 200px;
   border-radius: 50px;
-  margin: 1rem 1rem;
+  margin: 1rem 0;
   background-color: #0784f215;
 }
 

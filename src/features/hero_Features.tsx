@@ -1,5 +1,5 @@
 import { Background } from '@/components/background/Background';
-import {HeroTitle} from '@/components/hero/HeroTitle';
+import {Hero} from '@/components/hero/Hero';
 
 
 const HeroFeatures = () => {
@@ -8,10 +8,10 @@ const HeroFeatures = () => {
   <Background classN="Hero__Wrapper" color="">
     <div className={"Hero__Content"}>
 
-      <HeroTitle 
+      <Hero 
         lastName={'NAVARRO'}
-        firstName={'Benjamin'}
-        post={'Developpeur Fullstack'}
+        firstName={'BENJAMIN'}
+        post={'Developpeur Web'}
       />
 
     </div>

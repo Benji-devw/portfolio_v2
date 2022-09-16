@@ -31,7 +31,7 @@ const Portfolio = () => {
   
 
   return (
-    <div id='Portfolio'>
+    <section id='Portfolio__Section'>
       <div className="grid-container">
 
           {isOpen && (
@@ -148,7 +148,7 @@ const Portfolio = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 export { Portfolio };

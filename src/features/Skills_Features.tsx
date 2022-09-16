@@ -9,7 +9,7 @@ const SkillsFeatures = () => {
   <Background classN="Skills__Wrapper" color="">
     <div className={"Skills__Content"}>
 
-      <TitleSection title='Compétences' text='Mes Outils et mes perceptions' />
+      <TitleSection id='Skills' title='Compétences' text='Mes Outils et mes perceptions' />
       
       <SkillsArea skill={Skillsdatas}/>
 

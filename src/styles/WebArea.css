@@ -1,9 +1,9 @@
-#WebArea {
+#WebArea__Section {
   padding: 2rem 0;
   overflow: hidden;
 }
 
-#WebArea .grid-container {
+#WebArea__Section .grid-container {
   position: relative;
   height: 20vh;
 }
@@ -11,15 +11,15 @@
   top: 25%;
 }
 
-#WebArea .WebArea__SlideCard {
+#WebArea__Section .WebArea__SlideCard {
   text-align: center;
   animation-duration: 1s;
   filter: saturate(0);
 }
-#WebArea .WebArea__SlideCard:hover {
+#WebArea__Section .WebArea__SlideCard:hover {
   filter: saturate(1) !important;
 }
 
-#WebArea .slick-prev, #WebArea .slick-next {
+#WebArea__Section .slick-prev, #WebArea__Section .slick-next {
   display: none !important;
 }

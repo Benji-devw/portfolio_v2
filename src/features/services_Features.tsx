@@ -9,7 +9,7 @@ const ServicesFeatures = () => {
   <Background classN="Services__Wrapper" color="">
     <div className={"Services__Content"}>
 
-      <TitleSection title='Services' text='Une fonction un service' />
+      <TitleSection id='Services' title='Services' text='Une fonction un service' />
       <Services />
 
     </div>

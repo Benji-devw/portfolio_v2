@@ -1,19 +1,20 @@
  
 .Main__Button {
-  /* position: relative;
-  left: 50%;right: 50%;
+  position: relative;
+  /* left: 50%;right: 50%;
   transform: translate(-50%, -50%); */
   max-width: 200px;
   cursor: pointer;
   text-align: center;
+  box-shadow: 8px 5px 0px #fff;
 }
  
 .Main__Button:hover {
-    box-shadow: 8px 5px 0px #fff;
-    border: 1px solid var(--main-blue);
-    animation: depMove .2s ;
-    animation-timing-function: steps(1, end);
-  }
+  box-shadow: 8px 5px 0px #fff;
+  border: 1px solid var(--main-blue);
+  animation: depMove .2s ;
+  animation-timing-function: steps(1, end);
+}
 
 
  

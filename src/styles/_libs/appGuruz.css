@@ -1,6 +1,11 @@
-/** 
-*   TheAppGuruz
-**/
+
+@keyframes close {
+  to { 
+    transform:translateY(0) rotate(0deg); 
+  }
+}
+
+
 .fadeIn {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
@@ -22,7 +27,36 @@
 
 
 
-
+.slideOutRight {
+  -webkit-animation-name: slideOutRight;
+  animation-name: slideOutRight;
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  }
+  @-webkit-keyframes slideOutRight {
+  0% {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  }
+  100% {
+  visibility: hidden;
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  }
+  }
+  @keyframes slideOutRight {
+  0% {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  }
+  100% {
+  visibility: hidden;
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  }
+} 
 
 
 

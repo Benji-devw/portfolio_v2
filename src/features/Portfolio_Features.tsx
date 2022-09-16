@@ -9,7 +9,7 @@ const PortfolioFeatures = () => {
   <Background classN="Portfolio__Wrapper" color="">
     <div className={"Portfolio__Content"}>
       
-      <TitleSection title='Portfolio' text='Mes projets et mes contributions' />
+      <TitleSection id='Portfolio' title='Portfolio' text='Mes projets et mes contributions' />
 
       <Portfolio />
 

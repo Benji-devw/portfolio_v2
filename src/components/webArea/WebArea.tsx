@@ -28,7 +28,7 @@ const WebArea = () => {
   };
   
   return (
-    <div id="WebArea">
+    <div id="WebArea__Section">
         <div className="grid-container">
           <Slider {...settings}>
           {Object.values(WebIcons).map((e, id) => 

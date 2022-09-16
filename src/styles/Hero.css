@@ -1,0 +1,245 @@
+.Hero__Wrapper {
+  /* background-image: url("/media/circleHero.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; */
+  background-image: linear-gradient(
+    45deg,
+    hsl(264deg 65% 21%) 11%,
+    hsl(256deg 55% 27%) 38%,
+    hsl(249deg 48% 32%) 48%,
+    hsl(242deg 43% 38%) 55%,
+    hsl(234deg 46% 42%) 60%,
+    hsl(228deg 50% 45%) 65%,
+    hsl(223deg 56% 48%) 70%,
+    hsl(218deg 63% 50%) 76%,
+    hsl(214deg 76% 51%) 84%,
+    hsl(208deg 94% 49%) 100%
+  );
+  /* background-image: linear-gradient(to right top, #2f135a, #1f3e85, #0067a9, #008fc5, #21b7da); */
+  /* background: linear-gradient(45deg, #2D1A63 20%, #262D7D 20%, rgba(33,183,218,1) 100%); */
+  /* background: linear-gradient(45deg, #2D1A63, #262D7D, #1B4CA6, #0C77DF, #0785F2); */
+}
+
+
+
+#Hero__Section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  font-family: 'poppinsBold';
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url("/media/circleHero.svg") ;
+  /* background-size: 10%; */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 120%;
+}
+
+.Hero__MouseEvent {
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+
+.Hero__Subtitle, .HeroTitle__Main, #Bottom__Path {
+  pointer-events: none;
+}
+
+.HeroTitle__Main {
+  position: relative;
+  pointer-events: none;
+}
+
+.HeroTitle__Main h1 {
+  position: relative;
+  z-index: 3;
+  font-size: 7rem;
+  padding: 0;
+  margin: 0;
+
+  background: url('/media/profile_img.png');
+  background-size: 100%;
+  background-position: -100px;
+  background-repeat: no-repeat;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.ts1, .ts2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* transform: translate(-50%, -50%); */
+  background: var(--main-grad);
+  background-clip: text;
+  -webkit-text-stroke: 3px transparent;
+  color: var(--main-dark);
+}
+.ts1 {
+  z-index: 2;
+  font-size: 6.8rem;
+}
+.ts2 {
+  z-index: 1;
+  font-size: 6.6rem;
+}
+
+
+.firstName {
+  position: relative;
+  z-index: 6;
+  margin: 0;
+  padding: 0;
+  font-size: 3rem;
+  text-align: center;
+  width: 100%;
+  background: var(--main-light);
+  background-clip: text;
+  -webkit-text-stroke: 3px transparent;
+  color: var(--main-dark);
+  text-transform: uppercase;
+}
+
+
+
+
+
+.Hero__Subtitle {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: row;
+  /* pointer-events: none; */
+}
+
+.Hero__Subtitle .post {
+  /* padding: 3rem; */
+  font-size: 2rem;
+}
+.post span {
+  position: relative;
+  font-family: 'poppinsLight';
+  font-size: 2.3rem;
+  top: -1.5rem;
+}
+
+.post svg {
+  height: 140px;
+}
+.small {
+  fill: none;
+  stroke: var(--main-magenta);
+  stroke-width: 1;
+  stroke-dashoffset: 100%;
+  stroke-dasharray: 100%;
+  animation: wordSwith 5s ease-in-out infinite;
+}
+@keyframes wordSwith {
+  /* to{stroke-dashoffset: 0;} */
+  5%{stroke-dashoffset: 100%;}
+  25%{stroke-dashoffset: 0%;}
+  75%{stroke-dashoffset: 0%;}
+  95%{stroke-dashoffset: 100%;}
+}
+
+
+
+
+#Bottom__Path {
+  position: absolute;
+  bottom: -1%;
+  left: 0;
+  fill: var(--main-dark);
+}
+
+
+
+
+
+
+#HeroBg {
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  /* height: 300px; */
+}
+.HeroBg__Main {
+  fill: var(--main-dark);
+  stroke-width: 1;
+}
+.HeroBg__Blue {
+  filter: opacity(.2) blur(15px);
+  fill: var(--main-blue);
+}
+.HeroBg__Purple {
+  filter: opacity(.2) blur(15px);
+  fill: var(--main-violet);
+}
+.HeroBg__Magenta {
+  filter: opacity(.2) blur(15px);
+  fill: var(--main-magenta);
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+  .HeroTitle__Main h1 {
+    font-size: 4rem;
+  }
+  .ts1 {
+    font-size: 3.8rem;
+  }
+  .ts2 {
+    font-size: 3.6rem;
+  }
+  .Hero__Subtitle {
+    text-align: center;
+  }
+  .post span {
+    top: 4rem;
+  }
+  #HeroBg {
+    height: 300px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

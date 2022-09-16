@@ -1,6 +1,6 @@
 .Modal__Wrapper {
   position: fixed;
-  z-index: 100;
+  z-index: 900;
   top: 0;
   left: 0;
   right: 0;
@@ -10,6 +10,8 @@
 
   backdrop-filter: blur(10px);
   background-color: rgba(0,0,0,.4);
+
+  padding-top: 2rem;
 
   animation: .4s modalBlur;
   animation-timing-function: steps(2, end);
@@ -46,68 +48,24 @@
   position: fixed;
   z-index: 200;
   top: 1rem;
-  right: 5rem;
+  right: 2rem;
   width: 50px;
   height: 50px;
   cursor: pointer;
   transform: translateY(-200px);
-  animation: zoomIn 1s ease forwards;
+  animation: close 1s ease forwards;
 }
 .st110, .st111 {
   fill: var(--main-light);
-  /* animation: zoomIn 1s ease forwards; */
+  /* animation: close 1s ease forwards; */
 }
 .st110 {
   transform: rotate(-190deg);
-  animation: zoomIn 1s ease forwards;
+  animation: close 1s ease forwards;
 }
 .st111 {
   transform: rotate(190deg);
-  animation: zoomIn 1s ease forwards;
-}
-
-@keyframes zoomIn {
-  to { 
-    transform:translateY(0) rotate(0deg); 
-    
-  }
-}
-
-
-
-
-.Modal__Wrapper .ModalSlick__Container {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 2rem;
-  width: 100%;
-}
-.Modal__Wrapper .ModalSlick__SlideCard {
-  position: relative;
-  width: 400px;
-  height: 450px;
-}
-.Modal__Wrapper .slick-slide img {
-  cursor: grab;
- }
-.Modal__Wrapper .slick-slide {
-  padding: 0 0 6rem 0;
-}
-.Modal__Wrapper .slick-arrow  {
-  position: absolute;
-  z-index: 200;
-  height: 100%;
-  width: 100px !important;
-}
-.Modal__Wrapper .slick-prev {
-  position: absolute;
-  /* background: url('/media/arrow.svg') no-repeat; */
-}
-.Modal__Wrapper .slick-next {
-  position: absolute;
-  /* background: url('/media/arrow.svg') no-repeat; */
+  animation: close 1s ease forwards;
 }
 
 
@@ -115,30 +73,3 @@
 
 
 
-
-.Modal__Wrapper .ModalSlick__Infos {
-  position: absolute;
-  z-index: 100;
-  bottom: -30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60%;
-  padding: .5rem;
-  backdrop-filter: blur(10px);
-  border-radius: 10px;
-  box-shadow: var(--b-shadow);
-}
-.Modal__Wrapper .ModalSlick__Infos a:hover {
-  color: var(--main-blue);
-}
-
-@media screen and (max-width: 600px) {
-  .Modal__Wrapper .ModalSlick__Infos {
-    bottom: -10% !important;
-    width: 80% !important;
-  }
-  .Modal__Wrapper .slick-arrow  {
-    top: 65%;
-    height: 50px;
-  }
-}

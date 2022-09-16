@@ -1,4 +1,4 @@
-#Services {
+#Services__Section {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -39,7 +39,15 @@
   height: 100px;
 }
 
-
+.Services__Item code {
+  font-size: 2.2rem;
+  text-align: center;
+  width: 100%;
+  background: var(--main-light);
+  background-clip: text;
+  -webkit-text-stroke: .8px transparent;
+  color: var(--main-dark);
+}
 
 
 
@@ -47,7 +55,13 @@
   fill: var(--main-dark);
   stroke-width: .5;
   filter: drop-shadow(10px 10px 5px rgb(0 0 0 / 0.4))
+  /* animation: test 2s linear forwards; */
 }
+/* @keyframes test {
+  to {
+    filter: drop-shadow(10px 10px 5px rgb(0 0 0 / 0.4))
+  }
+} */
 
 .Services__Item .st2_Brush {
   filter: opacity(.03) blur(5px);
@@ -65,27 +79,6 @@
 
 
 
-
-/* .st2_Brush, .st3_Brush {
-  fill: none;
-  stroke: var(--main-blue);
-}
-.st2_Code, .st3_Code {
-  stroke:var(--main-violet);
-  animation-delay: 2s !important;
-}
-.st2_Backend, .st3_Backend {
-  stroke:var(--main-magenta);
-  animation-delay: 3s !important;
-}
-
-.svgCircle__Animate {
-  transition-duration: .5s;
-} */
-/* @keyframes pulse {
-  from { opacity: 1; }
-  to { opacity: 0; }
-} */
 
 
 
@@ -156,5 +149,7 @@
 @keyframes dash {
   to {
     stroke-dashoffset: 0;
+    filter: drop-shadow(5px 5px 2px rgb(0 0 0 / 1))
+    
   }
 }

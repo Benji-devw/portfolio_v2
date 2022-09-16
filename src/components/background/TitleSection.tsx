@@ -2,6 +2,7 @@ import { LineSection } from '@/components/background/LineSection'
 
 
 type ITitleProps = {
+  id: string
   title: string;
   text: string;
   classN?: string;
@@ -9,7 +10,7 @@ type ITitleProps = {
 };
 
 const TitleSection = (props: ITitleProps) => (
-  <div className='titleSection'>
+  <div id={props.id} className='titleSection'>
     <h2 className={`${props.classN} ${props.color}`}>{props.title}</h2>
     <p>{props.text}</p>
     <LineSection />

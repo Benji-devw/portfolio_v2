@@ -1,3 +1,7 @@
+#Contact {
+  position: relative;
+  overflow: visible;
+}
 
 #Contact .Contact__Form {
   position: fixed;
@@ -5,12 +9,27 @@
   right: 2rem;
   z-index: 300;
   backdrop-filter: blur(10px);
-  background-color: rgba(0,0,0,.4);
-  border-radius: 10px;
+  background-color: var(--main-dark-t);  
+  border-radius: 5px;
   border: 1px solid var(--main-blue);
-  padding: 1rem;
   box-shadow: var(--main-shadow);
   min-width: 250px;
+}
+
+.ContactForm__Header {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  min-width: 250px;
+  padding-left: .5rem;
+  background-color: var(--main-blue);  
+  box-shadow: var(--main-shadow);
+}
+.ContactForm__Header span {
+  margin-left: .5rem;
+}
+.ContactForm__Body {
+  padding: 0 1rem;
 }
 
 
@@ -18,45 +37,53 @@
 #Contact .Contact__Form form {
   display: flex;
   flex-direction: column;
+  padding: 1rem 0;
   /* align-items: center; */
   /* justify-content: center; */
 }
 #Contact .Contact__Form form > :nth-child(n) {
-  margin: .3rem;
-  font-size: 1rem;
+  font-family: 'poppinsLight';
+  margin: .5rem;
+  font-size: .9rem;
   outline: none;
-}
-#Contact .Contact__Form input {
-  border-radius: 100px;
-  border: 1px solid var(--main-blue);
-  padding: .3rem;
+  border: none;
+  box-shadow: var(--main-shadow-t);
   padding: .5rem;
 }
 #Contact .Contact__Form textarea {
-  border-radius: 20px;
-  border: 1px solid var(--main-blue);
   min-width: 330px;
-  min-height: 150px;
-  padding: .5rem;
+  min-height: 50px;
 }
 
 
 
 
-
-.g-recaptcha {
+/* .g-recaptcha {
   height: 80px;
+} */
+
+
+
+
+#Contact .Contact__Form .CloseContact__Btn {
+  position: absolute;
+  z-index: 200;
+  top: .7rem;
+  right: 1rem;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  transform: translateY(-200px);
+  animation: close 1s ease forwards;
+  border-radius: 10px;
+  padding: .1rem;
 }
-
-
-
-
 
 
 
 #Contact .OpenContact__Btn {
   position: fixed;
-  bottom: -3rem;
+  bottom: -2rem;
   right: 1rem;
   z-index: 800;
   cursor: pointer;
@@ -64,7 +91,6 @@
 }
 #Contact .OpenContact__Btn:hover {
   bottom: 0rem;
-  transition-duration: .3s;
 }
 
 
