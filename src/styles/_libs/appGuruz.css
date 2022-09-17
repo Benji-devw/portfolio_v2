@@ -192,3 +192,55 @@
     100% {filter: blur(0); opacity: 1;
   }
 } 
+
+
+
+
+
+
+
+
+
+
+
+
+/* SPINNER */
+.lds-facebook {
+  /* display: inline-block; */
+  position: relative;
+  left: 35%;
+  top: -1rem;
+  /* transform: translate(-50%, -50%); */
+  width: 100%;
+  height: 35px;
+}
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 3px;
+  width: 8px;
+  background: #fff;
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+.lds-facebook div:nth-child(1) {
+  left: 8px;
+  animation-delay: -0.24s;
+}
+.lds-facebook div:nth-child(2) {
+  left: 22px;
+  animation-delay: -0.12s;
+}
+.lds-facebook div:nth-child(3) {
+  left: 36px;
+  animation-delay: 0;
+}
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%, 100% {
+    top: 24px;
+    height: 32px;
+  }
+}

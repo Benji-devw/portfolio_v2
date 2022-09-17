@@ -1,6 +1,5 @@
 import { LineSection } from '@/components/background/LineSection'
 
-
 type ITitleProps = {
   id: string
   title: string;

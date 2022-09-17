@@ -1,5 +1,5 @@
 import { Link } from "react-scroll";
-import { createRef, useEffect, useState } from "react";
+import { createRef, useCallback, useEffect, useState } from "react";
 
 
 const NavToggler = () => {
@@ -8,21 +8,21 @@ const NavToggler = () => {
   const [toggler, setToggler] = useState(false)
   const [test, setTest] = useState('')
 
-  const handleToggler = (e: any) => {
+  const handleToggler = useCallback((e: any) => {
     if (!toggler) {setTest('blurOut'), setToggler(!toggler)}
     if (toggler) setTest('slideOutRight')
     setTimeout(() => { setToggler(!toggler), setTest('')}, 500);
-  }
+  }, [toggler])
 
   useEffect(() => {
     function handleClickOutside(event: any) {
       if (togglerRef.current && !togglerRef.current.contains(event.target)) handleToggler('close');
     }
     if (toggler) document.addEventListener("mousedown", handleClickOutside);
-  }, [togglerRef, toggler]);
+  }, [togglerRef, toggler, handleToggler]);
   
 
-  console.log(toggler);
+
   
   return (
     <>

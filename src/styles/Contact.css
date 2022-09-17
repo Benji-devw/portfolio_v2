@@ -47,7 +47,7 @@
   font-size: .9rem;
   outline: none;
   border: none;
-  box-shadow: var(--main-shadow-t);
+  /* box-shadow: var(--main-shadow-t); */
   padding: .5rem;
 }
 #Contact .Contact__Form textarea {
@@ -58,9 +58,9 @@
 
 
 
-/* .g-recaptcha {
-  height: 80px;
-} */
+.g-recaptcha {
+  height: 70px;
+}
 
 
 

@@ -1,47 +1,57 @@
 import Image from "next/image";
 import emailjs from '@emailjs/browser';
-import { useEffect, useRef, useState } from "react";
-import {MainButton} from "@/components/ui/Button";
+import { useRef, useState } from "react";
 import { useRouter } from "next/router";
 
 
+interface FormPost {  
+  name?: string  
+  email?: string  
+  message?: string
+}
 
 const Contact = () => {
   const router = useRouter();
   const form = useRef<HTMLDivElement | null>(null)
   const [openContact, setOpenContact] = useState(false)
+  const [formData, setFormData] = useState<FormPost>()
+  const [sendCheck, setSendCheck] = useState(false)
+  const [sendCheckValid, setSendCheckValid] = useState(false)
+  const [sendCheckError, setSendCheckError] = useState(false)
 
-  const templateParams = {
-    name: 'James',
-    notes: 'Check this out!'
-  };
+
 
   const sendEmail = (e: any) => {
-    console.log(e);
-    // emailjs.sendForm('service_18tk8aj', 'template_u1vg98h', form.current, 'CMeA_HhgBFe-s2dTJ')
-    //   .then((result) => {
-    //       console.log(result.text);
-    //   }, (error) => {
-    //       console.log(error.text);
-    //   });
+    e.preventDefault()
+    console.log(e.target);
+
+    setSendCheck(true)
+    emailjs.sendForm('service_18tk8aj', 'template_u1vg98h', e.target, 'CMeA_HhgBFe-s2dTJ')
+    .then((result) => {
+      // console.log(result.text);
+      setTimeout(() => {
+        setSendCheckValid(true)
+        setSendCheck(false)
+      }, 2000);
+    }, (error) => {
+      // console.log(error.text);
+      setTimeout(() => {
+        setSendCheck(false)
+        setSendCheckValid(false)
+          setSendCheckError(true)
+      }, 1000);
+      });
   };
 
   const handleContact = () => {
     setOpenContact(!openContact)
   }
 
-  useEffect(() => {
-    // function handleClickOutside(event: any) {
-    //   if (form.current && !form.current.contains(event.target)) setOpenContact(false);
-    // }
-    // document.addEventListener("mousedown", handleClickOutside);
-    // return () => {
-    //   document.removeEventListener("mousedown", handleClickOutside);
-    // };
-  }, [form]);
-
-
-  // console.log(openContact);
+  // const handleChange = ( e: React.ChangeEvent<HTMLInputElement>) => {
+  //   setFormData({...formData, 
+  //       "firstname": e.target.value,  
+  //   });
+  // }
   
   
   return (
@@ -74,23 +84,26 @@ const Contact = () => {
             </svg>
           </div>
           <div className="ContactForm__Body">
-            <form onSubmit={(e) => sendEmail(e)}>
-              <input type="text" name="user_name" placeholder="Name" minLength={10} maxLength={30} pattern="[a-z0-9]{1,15}" required/>
-              <input type="email" name="user_email" placeholder="email" required/>
-              <textarea name="message" placeholder="message..." required/>
-              <div className="g-recaptcha" data-sitekey="6LfX9ewhAAAAAPyHQW7-cxvyCFLGfDcdo6B-CgBE"></div>
-            </form>
-            <MainButton classN={`Main__Button`}>
-              <div onClick={(e) => sendEmail(e.target)}>
-                Envoyer
-              </div>
-            </MainButton>
-          </div>
 
+            <form onSubmit={(e) => sendEmail(e)}>
+              <input onChange={(e) => setFormData({...formData , name: e.currentTarget.value})} id='firstname' type="text" name="user_name" placeholder="Name" minLength={3} maxLength={20} pattern="[a-z0-9]{1,15}" required/>
+              <input onChange={(f) => setFormData({...formData ,email: f.currentTarget.value})} type="email" name="user_email" placeholder="email" required/>
+              <textarea onChange={(g) => setFormData({...formData ,message: g.currentTarget.value})} name="message" placeholder="message..." required/>
+              <div className="g-recaptcha" data-sitekey="6LfX9ewhAAAAAPyHQW7-cxvyCFLGfDcdo6B-CgBE"></div>
+
+                {sendCheck ? 
+                  !sendCheckValid ? 
+                    <div className="lds-facebook"><div></div><div></div><div></div></div> 
+                    : <p>Message Envoyé</p>
+                  : <button type='submit'>{sendCheckError ? 'Réessayer' : 'Envoyer'}</button>
+                  }
+
+            </form>
+          </div>
         </div>
       }
 
-    {/* <script src="https://www.google.com/recaptcha/api.js" async defer></script> */}
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </div>
   );
 }

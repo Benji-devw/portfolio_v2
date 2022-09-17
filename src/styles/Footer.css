@@ -12,7 +12,7 @@
   /* text-align: center; */
   /* justify-content: center; */
   border-top: 1px solid var(--main-blue);
-
+  width: 100%;
 }
 
 #Footer .Footer__Card {
@@ -43,21 +43,25 @@
 
 .footer_left {
   text-align: left;
-  width: 60%;
+  width: 40%;
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .footer_middle {
   display: flex;
   align-items: flex-end;
-  justify-content: left;
+  justify-content: center;
   text-align: left;
 }
 
 .footer_right {
   display: flex;
   align-items: flex-end;
-  justify-content: left;
+  justify-content: center;
 
 }
 .footer_right .Footer_Link {

@@ -8,7 +8,6 @@ type IHeroProps = {
 };
 
 
-
 const Hero = (props: IHeroProps) => {
   const {x, y, handleMouseMove} = useMove()
   const [word, setWord] = useState('NextJs');
@@ -25,8 +24,6 @@ const Hero = (props: IHeroProps) => {
       return () => clearInterval(intervalID);
   }, [shuffle])
     
-  // console.log(text);
-  
 
   return (
     <section id="Hero__Section">

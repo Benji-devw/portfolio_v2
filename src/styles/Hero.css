@@ -73,7 +73,9 @@
   background-position: -100px;
   background-repeat: no-repeat;
   -webkit-text-fill-color: transparent;
+  color: transparent;
   -webkit-background-clip: text;
+  background-clip: text;
 }
 .ts1, .ts2 {
   position: absolute;
