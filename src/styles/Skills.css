@@ -6,7 +6,6 @@
 #Skills__Section h3 {
   position: relative;
   z-index: 150;
-  cursor: pointer;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
 #Skills__Section h3::after {
@@ -158,12 +157,13 @@
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  /* min-height: 250vh; */
+  min-width: 50vw;
+  overflow: hidden;
 }
 #Skills__Section .SkillsRight_Content {
   display: flex;
   flex-direction: column;
-  max-width: 90%;
+  height: 100%;
 } 
 #Skills__Section .SkillsRight_Text {
   height: 85vh;
@@ -181,8 +181,69 @@
 }
 
 
+#Skills__Section .annotation {
+  position: relative;
+  min-width: 50vw;
+  /* overflow: hidden; */
+}
+.annotation .card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(10px);
+  background-color: var(--main-dark-t);  
+  border-radius: 15px;
+  border: 1px solid var(--main-blue-t);
+  box-shadow: var(--main-shadow-lg);
+  width: 80%;
+  max-width: 500px;
+  padding: .5rem 2rem;
+  cursor: pointer;
+}
+/* .annotation .card:hover {
+  z-index: 50;
+  transition-duration: 1s;
+} */
+.annotation .card:nth-child(1) {
+  top: 100px !important;
+  left: 20% !important;
+  animation-delay: 0.2s;
+}
+.annotation .card:nth-child(2) {
+  top: 10px !important;
+  left: 5% !important;
+  animation-delay: 0s;
+}
+.annotation .card:nth-child(3) {
+  top: 180px !important;
+  left: 15% !important;
+  animation-delay: 0.4s;
+}
+.annotation .card:nth-child(4) {
+  top: 350px !important;
+  left: 0% !important;
+  animation-delay: 0.8s;
+}
 
+.card__Animate {
+  animation: SkillUp .5s both;
 
+}
+
+@keyframes SkillUp {
+  0% {
+    display: none;
+    opacity: 0;
+    -webkit-transform: translate3d(150%, 0, 0);
+    transform: translate3d(150%, 0, 0);
+  }
+  100% {
+    display: block;
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
 
 
 
@@ -199,6 +260,9 @@
   #Skills__Section .Skills_Left {
     display: none;
   }
+  #Skills__Section .Skills_Right {
+    min-width: 98vw;
+  }
 
   #Skills__Section .SkillsRight__Images {
     margin: auto;
@@ -210,7 +274,7 @@
     max-width: 100%;
   } 
   #Skills__Section .SkillsRight_Text {
-    min-height: 600px;
+    min-height:800px;
     /* height: 70vh; */
     margin: 0 0 3rem 0;
   }

@@ -35,12 +35,6 @@ const illustrations = [
     "name": "Photoshop",
     "link": "false",
     "description": "",
-    "src": "/media/illustrations/Text-Destructuré.jpg"
-  },
-  {
-    "name": "Photoshop",
-    "link": "false",
-    "description": "",
     "src": "/media/illustrations/egle-Destructure.jpg"
   },
   {
