@@ -2,19 +2,25 @@ import Image from "next/image";
 import emailjs from '@emailjs/browser';
 import { useRef, useState } from "react";
 import { useRouter } from "next/router";
+// import ReCAPTCHA from "react-google-recaptcha";
+import useAnalyticsEventTracker from '../../utils/useAnalyticsEventTracker';
 
 
-interface FormPost {  
+interface IFormPost {  
   name?: string  
   email?: string  
   message?: string
 }
 
+
+
 const Contact = () => {
+  const gaEventTracker = useAnalyticsEventTracker('Contact us');
   const router = useRouter();
-  const form = useRef<HTMLDivElement | null>(null)
+  // const recaptchaRef = useRef<ReCAPTCHA>()
+  const form = useRef<HTMLFormElement | null>(null)
   const [openContact, setOpenContact] = useState(false)
-  const [formData, setFormData] = useState<FormPost>()
+  const [formData, setFormData] = useState<IFormPost>()
   const [sendCheck, setSendCheck] = useState(false)
   const [sendCheckValid, setSendCheckValid] = useState(false)
   const [sendCheckError, setSendCheckError] = useState(false)
@@ -23,22 +29,26 @@ const Contact = () => {
 
   const sendEmail = (e: any) => {
     e.preventDefault()
-    console.log(e.target);
-
     setSendCheck(true)
-    emailjs.sendForm('service_18tk8aj', 'template_u1vg98h', e.target, 'CMeA_HhgBFe-s2dTJ')
+
+    const resetForm = e.target as HTMLFormElement;
+    
+    emailjs.sendForm('service_9p86mok', 'template_z6jbpjq', e.target, 'ittbXHEclFdLS1CCB')
     .then((result) => {
       // console.log(result.text);
       setTimeout(() => {
         setSendCheckValid(true)
         setSendCheck(false)
+        setFormData({name:'', email:'',message:'' })
+        resetForm.reset();
+        gaEventTracker('contact_send')
       }, 2000);
     }, (error) => {
       // console.log(error.text);
       setTimeout(() => {
         setSendCheck(false)
         setSendCheckValid(false)
-          setSendCheckError(true)
+        setSendCheckError(true)
       }, 1000);
       });
   };
@@ -53,11 +63,14 @@ const Contact = () => {
   //   });
   // }
   
-  
   return (
     <div id="Contact">
 
-      <div className="OpenContact__Btn" onClick={() => handleContact()}>
+      <div className="OpenContact__Btn" 
+        onClick={() => {
+          handleContact()
+          gaEventTracker('contact')
+          }}>
         <Image src={`${router.basePath}/media/Contact.svg`} 
             alt={'contact'}
             priority
@@ -67,7 +80,7 @@ const Contact = () => {
       </div>
 
       {openContact &&
-        <div ref={form} className={`Contact__Form ${openContact && 'ContactOpen__Animate'}`}>
+        <div className={`Contact__Form ${openContact && 'ContactOpen__Animate'}`}>
           <div className="ContactForm__Header">
             <Image src={`${router.basePath}/media/Contact.svg`} 
               alt={'contact'}
@@ -85,11 +98,12 @@ const Contact = () => {
           </div>
           <div className="ContactForm__Body">
 
-            <form onSubmit={(e) => sendEmail(e)}>
+            <form ref={form} onSubmit={(e) => sendEmail(e)}>
               <input onChange={(e) => setFormData({...formData , name: e.currentTarget.value})} id='firstname' type="text" name="user_name" placeholder="Name" minLength={3} maxLength={20} pattern="[a-z0-9]{1,15}" required/>
               <input onChange={(f) => setFormData({...formData ,email: f.currentTarget.value})} type="email" name="user_email" placeholder="email" required/>
               <textarea onChange={(g) => setFormData({...formData ,message: g.currentTarget.value})} name="message" placeholder="message..." required/>
-              <div className="g-recaptcha" data-sitekey="6LfX9ewhAAAAAPyHQW7-cxvyCFLGfDcdo6B-CgBE"></div>
+                            
+              <div className="g-recaptcha"></div>
 
                 {sendCheck ? 
                   !sendCheckValid ? 
@@ -102,8 +116,6 @@ const Contact = () => {
           </div>
         </div>
       }
-
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </div>
   );
 }

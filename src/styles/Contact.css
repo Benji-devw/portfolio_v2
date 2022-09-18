@@ -59,7 +59,10 @@
 
 
 .g-recaptcha {
-  height: 70px;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 30px;
 }
 
 

@@ -15,7 +15,7 @@ const Portfolio = () => {
   const [previewHover, setPreviewHover] = useState('')
   const [isOpen, setIsOpen] = useState(false);
   const [datasForModal, setDatasForModal] = useState<any>()
-  var reactSlickSettings = { infinite: true, slidesToShow: 1, slidesToScroll: 1, };
+  var reactSlickSettings = { infinite: false, slidesToShow: 1, slidesToScroll: 1, };
 
   useEffect(() => {
     if (isOpen) {
@@ -26,9 +26,6 @@ const Portfolio = () => {
        document.body.style.overflow = 'unset'
     }
   }, [isOpen])
-
-  // console.log(illus);
-  
 
   return (
     <section id='Portfolio__Section'>
@@ -75,7 +72,7 @@ const Portfolio = () => {
             {previewHover === 'design' ? (
               <Image 
                 className={`${previewHover === 'design' ? 'blurOut': 'blurIn'}`}
-                src={`${router.basePath}/media/Illustrations/Design-Orange.jpg`} 
+                src={`${router.basePath}/media/illustrations/Design-Orange.jpg`} 
                 alt={'Illustration'}
                 priority
                 layout='fill'
@@ -96,7 +93,7 @@ const Portfolio = () => {
             {previewHover === 'web' ? (
               <Image 
                 className={`${previewHover === 'web' ? 'blurOut': 'blurIn'}`}
-                src={`${router.basePath}/media/Web/aleph.png`} 
+                src={`${router.basePath}/media/web/aleph.png`} 
                 alt={'Web'}
                 priority
                 layout='fill'

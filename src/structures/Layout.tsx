@@ -3,13 +3,14 @@ import Head from 'next/head'
 import { Footer } from '@/components/ui/Footer'
 import { Contact } from '@/components/ui/Contact';
 import { NavFeatures } from '@/components/ui/navigation/Nav_Features'
+import ReactGA from 'react-ga';
 
 type ILayoutProps = {
   children?: ReactNode | undefined;
 };
 
-
 export default function Layout({ children }: ILayoutProps) {
+  ReactGA.initialize('G-DXKFRZ3S9W');
   return (
     <>
       <Head>

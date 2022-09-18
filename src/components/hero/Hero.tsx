@@ -20,7 +20,7 @@ const Hero = (props: IHeroProps) => {
   }, []);
 
   useEffect(() => {
-      const intervalID = setInterval(shuffle, 5000);
+      const intervalID = setInterval(shuffle, 6000);
       return () => clearInterval(intervalID);
   }, [shuffle])
     

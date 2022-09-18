@@ -144,14 +144,14 @@
   stroke-width: 1;
   stroke-dashoffset: 100%;
   stroke-dasharray: 100%;
-  animation: wordSwith 5s ease-in-out infinite;
+  animation: wordSwith 6s ease-in-out infinite;
 }
 @keyframes wordSwith {
   /* to{stroke-dashoffset: 0;} */
-  5%{stroke-dashoffset: 100%;}
+  10%{stroke-dashoffset: 100%;}
   25%{stroke-dashoffset: 0%;}
   75%{stroke-dashoffset: 0%;}
-  95%{stroke-dashoffset: 100%;}
+  90%{stroke-dashoffset: 100%;}
 }
 
 

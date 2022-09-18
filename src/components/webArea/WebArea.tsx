@@ -13,7 +13,7 @@ const WebArea = () => {
     slidesToScroll: 18,
     autoplay: true,
     speed: 40000,
-    autoplaySpeed: 1,
+    // autoplaySpeed: 10000,
     cssEase: "linear",
     responsive: [
       {
