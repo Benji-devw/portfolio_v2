@@ -200,10 +200,7 @@
   padding: .5rem 2rem;
   cursor: pointer;
 }
-/* .annotation .card:hover {
-  z-index: 50;
-  transition-duration: 1s;
-} */
+
 .annotation .card:nth-child(1) {
   top: 100px !important;
   left: 20% !important;

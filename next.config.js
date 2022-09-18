@@ -1,11 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  reactStrictMode: false,
   swcMinify: true,
-  images: {
-    domains: ["navarro-benjamin.com"],
-    // formats: ["image/webp", "image/avif"],
-}
 }
 
 module.exports = nextConfig

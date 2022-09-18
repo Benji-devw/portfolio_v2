@@ -3,7 +3,7 @@ import emailjs from '@emailjs/browser';
 import { useRef, useState } from "react";
 import { useRouter } from "next/router";
 // import ReCAPTCHA from "react-google-recaptcha";
-import useAnalyticsEventTracker from '../../utils/useAnalyticsEventTracker';
+import {eventTrack} from '../../utils/useAnalyticsEventTracker';
 
 
 interface IFormPost {  
@@ -15,7 +15,7 @@ interface IFormPost {
 
 
 const Contact = () => {
-  const gaEventTracker = useAnalyticsEventTracker('Contact us');
+  
   const router = useRouter();
   // const recaptchaRef = useRef<ReCAPTCHA>()
   const form = useRef<HTMLFormElement | null>(null)
@@ -41,14 +41,13 @@ const Contact = () => {
           setSendCheckValid(true)
           setFormData({name:'', email:'',message:'' })
           resetForm.reset();
-          gaEventTracker('contact_send')
+          eventTrack('contact_send', 'Click to send', 'Button')
       }, 2000);
     }, (error) => {
       // console.log(error.text);
       setTimeout(() => {
         setSendCheck(false)
         setSendCheckError(true)
-        gaEventTracker('contact_send')
       }, 1000);
       });
   };
@@ -69,7 +68,6 @@ const Contact = () => {
       <div className="OpenContact__Btn" 
         onClick={() => {
           handleContact()
-          gaEventTracker('contact')
           }}>
         <Image src={`${router.basePath}/media/Contact.svg`} 
             alt={'contact'}

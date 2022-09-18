@@ -1,9 +1,8 @@
 import ReactGA from "react-ga";
 
-const useAnalyticsEventTracker = (category="Porfolio_v2") => {
-  const eventTracker = (action = "test action", label = "test label") => {
-    ReactGA.event({category, action, label});
+const eventTrack = (category: any, action: any, label: any) => {  
+  console.log("GA event:", category, ":", action, ":", label); 
+   ReactGA.event({    category: category,    action: action,    label: label,  })
+
   }
-  return eventTracker;
-}
-export default useAnalyticsEventTracker;
+  export {eventTrack}

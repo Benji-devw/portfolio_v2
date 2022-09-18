@@ -46,7 +46,7 @@ const Portfolio = () => {
                 {datasForModal.map((item: any, id: any) => 
                 <div key={id} className={`ModalSlick__SlideCard`}>
                   <Image key={id}
-                    src={`${router.basePath}${item.src}`} 
+                    src={`${item.src}`}
                     alt={'img'}
                     priority
                     layout='fill'
