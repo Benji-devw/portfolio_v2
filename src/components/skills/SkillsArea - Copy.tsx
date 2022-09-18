@@ -112,29 +112,20 @@ const SkillsArea = ({skill}: IContextProps) => {
                           alt={'Frontend_img'} priority layout='fill' objectFit='contain'
                         />
                     </div>
-                    
-                    
-                      <div className={`SkillsRight_Content`}>
-                          <div className="annotation">
-                            <div className="card">
-                              <h3 className={``} >Prototype et conception UX</h3>
-                              <p>Pour la conception d’une UX efficace et accessible, je m’inspire et respecte les tendances web ainsi que les bonnes pratiques afin de rendre un prototype intéractif et intuitif.</p>
-                            </div>
-                            <div className="card">
-                              <h3 className={``} >Conception UI</h3>
-                              <p>L'interface utilisateur est un point non négligeable pour mettre en confiance un client. Une interface épurée, légère et responsive donne immédiatement un sentiment de propreté et de professionnalisme.</p>
-                            </div>
-                            <div className="card">
-                              <h3 className={``} >Navigation et Animation</h3>
-                              <p>Un effet de perspective, un bouton animé, une réaction de l’interface avec le curseur ou la molette de l’utilisateur…, cela donne vie à l’interface et rend la navigation plus attrayante. C’est toujours un plaisir mais aussi un défi de trouver un comportement inédit et créatif, ainsi qu’un style personnalisé pour chaque projet.</p>
-                            </div>
-                            <div className="card">
-                              <h3 className={``} >Mes connaissance</h3>
-                              <p>Photophop - Illutrator - XD</p>
+                    {Object.values(datas).map((value: any, id: number) => 
+                      value.name === "design" &&
+                        Object.values(value.context).map((val: any, id: number) => 
+                          <div className={`SkillsRight_Content`} key={id}>
+                            <h3 className={`${value.name} ${collapseOpen === `${val.classe}` ? 'Collpase__Opened' : 'Collpase__Closed'}`} 
+                              onClick={() => setCollapseOpen(`${val.classe}`)} 
+                            > {val.title} </h3>
+                            
+                            <div  className={`${val.classe}`} style={{height: collapseOpen === `${val.classe}` ? '150px' : '0px'}}>
+                              <p>{val.desc}</p>
                             </div>
                           </div>
-                        </div>
-                   
+                        )
+                      )}
                 </div>
                 <div className="SkillsRight_Text">
                     <div className='SkillsRight__Images'>

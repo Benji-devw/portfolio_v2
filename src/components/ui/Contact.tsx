@@ -37,18 +37,18 @@ const Contact = () => {
     .then((result) => {
       // console.log(result.text);
       setTimeout(() => {
-        setSendCheckValid(true)
-        setSendCheck(false)
-        setFormData({name:'', email:'',message:'' })
-        resetForm.reset();
-        gaEventTracker('contact_send')
+          setSendCheck(true)
+          setSendCheckValid(true)
+          setFormData({name:'', email:'',message:'' })
+          resetForm.reset();
+          gaEventTracker('contact_send')
       }, 2000);
     }, (error) => {
       // console.log(error.text);
       setTimeout(() => {
         setSendCheck(false)
-        setSendCheckValid(false)
         setSendCheckError(true)
+        gaEventTracker('contact_send')
       }, 1000);
       });
   };
