@@ -72,7 +72,7 @@ const Portfolio = () => {
             {previewHover === 'design' ? (
               <Image 
                 className={`${previewHover === 'design' ? 'blurOut': 'blurIn'}`}
-                src={`/media/illustrations/Design-Orange.jpg`} 
+                src={`/media/Design-Orange.jpg`} 
                 alt={'Illustration'}
                 priority
                 layout='fill'
@@ -93,7 +93,7 @@ const Portfolio = () => {
             {previewHover === 'web' ? (
               <Image 
                 className={`${previewHover === 'web' ? 'blurOut': 'blurIn'}`}
-                src={`/media/web/aleph.png`} 
+                src={`/media/aleph.jpg`} 
                 alt={'Web'}
                 priority
                 layout='fill'
@@ -113,7 +113,7 @@ const Portfolio = () => {
             {previewHover === 'logo' ? (
               <Image 
                 className={`${previewHover === 'logo' ? 'blurOut': 'blurIn'}`}
-                src={`/media/logos/Logo-Vallena.svg`} 
+                src={`/media/Logo-Vallena.svg`} 
                 alt={'Logo'}
                 priority
                 layout='fill'
@@ -133,7 +133,7 @@ const Portfolio = () => {
             {previewHover === 'composant' ? (
               <Image 
                 className={`${previewHover === 'composant' ? 'blurOut': 'blurIn'}`}
-                src={`/media/formations/NB_Certification_Inté_FRONT.jpg`} 
+                src={`/media/NB_Certification_Inté_FRONT.jpg`} 
                 alt={'test'}
                 priority
                 layout='fill'

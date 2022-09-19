@@ -5,43 +5,43 @@ const illustrations = [
     "name": "Photoshop",
     "link": "false",
     "description": "",
-    "src": "/media/illustrations/Design-Orange.jpg"
+    "src": "/media/Design-Orange.jpg"
   },
   {
     "name": "Illustrator",
     "link": "false",
     "description": "",
-    "src": "/media/illustrations/Background-Illustration.jpg"
+    "src": "/media/Background-Illustration.jpg"
   },
   {
     "name": "Illustrator",
     "link": "false",
     "description": "",
-    "src": "/media/illustrations/Planete-Illustration.jpg"
+    "src": "/media/Planete-Illustration.jpg"
   },
   {
     "name": "Photoshop",
     "link": "false",
     "description": "",
-    "src": "/media/illustrations/Wave-Purple.jpg"
+    "src": "/media/Wave-Purple.jpg"
   },
   {
     "name": "Photoshop",
     "link": "false",
     "description": "",
-    "src": "/media/illustrations/Femme-Soie.jpg"
+    "src": "/media/Femme-Soie.jpg"
   },
   {
     "name": "Photoshop",
     "link": "false",
     "description": "",
-    "src": "/media/illustrations/egle-Destructure.jpg"
+    "src": "/media/egle-Destructure.jpg"
   },
   {
     "name": "Photoshop",
     "link": "false",
     "description": "",
-    "src": "/media/illustrations/automne.jpg"
+    "src": "/media/automne.jpg"
   }
 ]
 export { illustrations };
