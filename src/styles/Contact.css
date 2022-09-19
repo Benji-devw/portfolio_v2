@@ -8,6 +8,7 @@
   bottom: 2rem;
   right: 2rem;
   z-index: 300;
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   background-color: var(--main-dark-t);  
   border-radius: 5px;
@@ -101,6 +102,7 @@
 
 
 .ContactOpen__Animate {
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   background-color: rgba(0,0,0,.4);
 

@@ -3,14 +3,22 @@ import Head from 'next/head'
 import { Footer } from '@/components/ui/Footer'
 import { Contact } from '@/components/ui/Contact';
 import { NavFeatures } from '@/components/ui/navigation/Nav_Features'
-import ReactGA from 'react-ga';
+// import ReactGA from 'react-ga';
+import TagManager from 'react-gtm-module'
+
 
 type ILayoutProps = {
   children?: ReactNode | undefined;
 };
 
 export default function Layout({ children }: ILayoutProps) {
-  ReactGA.initialize('G-DXKFRZ3S9W');
+const tagManagerArgs = {
+  gtmId: 'G-DXKFRZ3S9W',
+  dataLayerName: 'PageDataLayer'
+}
+if (process.browser) {
+  TagManager.initialize(tagManagerArgs);
+}
   return (
     <>
       <Head>

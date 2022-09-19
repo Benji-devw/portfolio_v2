@@ -5,25 +5,25 @@ const logos = [
     "name": "Vallena",
     "link": "false",
     "description": "",
-    "src": "/media/logos/Logo-Vallena.svg"
+    "src": "/media/Logo-Vallena.svg"
   },
   {
     "name": "logo",
     "link": "false",
     "description": "",
-    "src": "/media/logos/ParticulesLogo.svg"
+    "src": "/media/ParticulesLogo.svg"
   },
   {
     "name": "np2c3",
     "link": "false",
     "description": "",
-    "src": "/media/logos/Raph-logoOld.svg"
+    "src": "/media/Raph-logoOld.svg"
   },
   {
     "name": "VirtuelGraph",
     "link": "false",
     "description": "",
-    "src": "/media/logos/VirtuelGraph__LOGO_V.svg"
+    "src": "/media/VirtuelGraph__LOGO_V.svg"
   }
 ]
 export { logos };

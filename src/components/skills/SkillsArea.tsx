@@ -103,12 +103,12 @@ const SkillsArea = ({skill}: IContextProps) => {
 
         {datasWait ? 
           checkScreenW > 800 && 
-          <div className="Skills_Left" style={{height: !datasWait ? '80vh' : ''}}>
+          <div className={`Skills_Left ${!datasWait ? 'blurIn' : 'blurOut'}`} style={{height: !datasWait ? '80vh' : ''}}>
             <div className="SkillsLeft_Content">
                 <div className='SkillsLeft__Images'>
                   <Image 
                     src={`${sticky_left_src[switchStickyImg]}`} 
-                    alt={'sticky_left_img'}
+                    alt={'img'}
                     priority
                     layout='fill'
                     objectFit='contain'
@@ -138,7 +138,7 @@ const SkillsArea = ({skill}: IContextProps) => {
                 <div ref={designRef} className="SkillsRight_Text">
                     <div className='SkillsRight__Images'>
                       <Image src={`${router.basePath}/media/SkillsLeft__Frontend.svg`} 
-                        alt={'Frontend_img'} priority layout='fill' objectFit='contain' />
+                        alt={'frontend_img'} priority layout='fill' objectFit='contain' />
                     </div>
                     <div className={`SkillsRight_Content`}>
                       <div className="annotation">
@@ -161,7 +161,7 @@ const SkillsArea = ({skill}: IContextProps) => {
                 <div ref={progRef} className="SkillsRight_Text">
                     <div className='SkillsRight__Images'>
                       <Image src={`${router.basePath}/media/SkillsLeft__Programmation.svg`} 
-                        alt={'Frontend_img'} priority layout='fill' objectFit='contain' />
+                        alt={'prog_img'} priority layout='fill' objectFit='contain' />
                     </div>
                     <div className={`SkillsRight_Content`}>
                       <div className="annotation">
@@ -184,7 +184,7 @@ const SkillsArea = ({skill}: IContextProps) => {
                 <div ref={backendRef} className="SkillsRight_Text">
                     <div className='SkillsRight__Images'>
                       <Image src={`${router.basePath}/media/SkillsLeft__Backend.svg`} 
-                        alt={'Frontend_img'} priority layout='fill' objectFit='contain' />
+                        alt={'backend_img'} priority layout='fill' objectFit='contain' />
                     </div>
                     <div className={`SkillsRight_Content`}>
                       <div className="annotation">

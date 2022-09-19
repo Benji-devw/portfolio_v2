@@ -49,8 +49,8 @@ const Services = () => {
               <line className={`st_Fontend ${iconsIsVisible && 'svgPath__Animate'}`} x1="159" y1="144.7" x2="165.9" y2="151.5"/>
             </g>
           </svg>
-          <div className={`description textBrush__Animate ${iconsIsVisible ? 'blurOut' : 'blurIn'}`}>
-            <code ><span>F</span>ONTEND</code>
+          <div className={`description Fontend textBrush__Animate ${iconsIsVisible ? 'blurOut' : 'blurIn'}`}>
+            <code><span>F</span>ONTEND</code>
             <p>Bonne maitrise des logiciels de graphisme pour une interface précise et sur mesure...</p>
           </div>
         </div>
@@ -108,7 +108,7 @@ const Services = () => {
           </svg>
           {/* <code className={`textCode__Animate ${iconsIsVisible ? 'blurOut' : 'blurIn'}`}><span>P</span>ROGRAMATION</code> */}
           <div className={`description textCode__Animate ${iconsIsVisible ? 'blurOut' : 'blurIn'}`}>
-            <code ><span>P</span>ROGRAMATION</code>
+            <code><span>P</span>ROGRAMATION</code>
             <p>JavaScrip, mon langage favori ainsi que les frameworks (React, Nextjs...)   </p>
           </div>
         </div>
@@ -140,7 +140,7 @@ const Services = () => {
             </g>
           </svg>
           <div className={`description textBackend__Animate ${iconsIsVisible ? 'blurOut' : 'blurIn'}`}>
-            <code ><span>B</span>ACKEND</code>
+            <code><span>B</span>ACKEND</code>
             <p>Une maitrise indispensable des outils backend pour des projets de toute taille (Nodejs, MongoDB, Nosql...)</p>
           </div>
         </div>

@@ -149,7 +149,7 @@
 @keyframes dash {
   to {
     stroke-dashoffset: 0;
-    filter: drop-shadow(5px 5px 2px rgb(0 0 0 / 1))
+    /* filter: drop-shadow(5px 5px 2px rgb(0 0 0 / 1)) */
     
   }
 }

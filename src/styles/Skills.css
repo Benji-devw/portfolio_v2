@@ -88,7 +88,7 @@
 .SkillsLeft__Images {
   position: absolute;
   z-index: 50;
-  top: 37%;
+  top: 43%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 500px;
@@ -111,11 +111,11 @@
 .SkillsLeft_Content .circleBack {
   max-width: 800px;
   min-width: 400px;
-  -webkit-transform: rotateX(-70deg) rotateY(0deg) translateY(0px) translateZ(70px) scale(1) skewX(27deg) skewY(-30deg);
-  -moz-transform: rotateX(-70deg) rotateY(0deg) translateY(0px) translateZ(70px) scale(1) skewX(27deg) skewY(-30deg);
-  -ms-transform: rotateX(-70deg) rotateY(0deg) translateY(0px) translateZ(70px) scale(1) skewX(27deg) skewY(-30deg);
-  -o-transform: rotateX(-70deg) rotateY(0deg) translateY(0px) translateZ(70px) scale(1) skewX(27deg) skewY(-30deg);
-  transform:  rotateX(-70deg) rotateY(0deg) translateY(50px) translateZ(70px) scale(1) skewX(0deg) skewY(-0deg);
+  -webkit-transform: rotateX(-70deg) rotateY(0deg) translateY(200px) translateZ(70px) scale(1) skewX(0deg) skewY(0deg);
+  -moz-transform: rotateX(-70deg) rotateY(0deg) translateY(200px) translateZ(70px) scale(1) skewX(0deg) skewY(0deg);
+  -ms-transform: rotateX(-70deg) rotateY(0deg) translateY(200px) translateZ(70px) scale(1) skewX(0deg) skewY(0deg);
+  -o-transform: rotateX(-70deg) rotateY(0deg) translateY(200px) translateZ(70px) scale(1) skewX(0deg) skewY(0deg);
+  transform:  rotateX(-70deg) rotateY(0deg) translateY(200px) translateZ(70px) scale(1) skewX(0deg) skewY(0deg);
 
 }
 .SkillsLeft_Content .Skills_st1 {
@@ -184,12 +184,13 @@
 #Skills__Section .annotation {
   position: relative;
   min-width: 50vw;
-  /* overflow: hidden; */
 }
 .annotation .card {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 0;
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   background-color: var(--main-dark-t);  
   border-radius: 15px;
@@ -199,40 +200,46 @@
   max-width: 500px;
   padding: .5rem 2rem;
   cursor: pointer;
+  user-select: none !important;
 }
 
 .annotation .card:nth-child(1) {
-  top: 100px !important;
-  left: 20% !important;
+  margin-top: 100px !important;
+  margin-left: 20% !important;
   animation-delay: 0.2s;
+  -webkit-transform: translate3d(150%, 0, 0);
+  transform: translate3d(150%, 0, 0);
 }
 .annotation .card:nth-child(2) {
-  top: 10px !important;
-  left: 5% !important;
+  margin-top: 10px !important;
+  margin-left: 5% !important;
   animation-delay: 0s;
+  -webkit-transform: translate3d(150%, 0, 0);
+  transform: translate3d(150%, 0, 0);
 }
 .annotation .card:nth-child(3) {
-  top: 180px !important;
-  left: 15% !important;
+  margin-top: 180px !important;
+  margin-left: 15% !important;
   animation-delay: 0.4s;
+  -webkit-transform: translate3d(150%, 0, 0);
+  transform: translate3d(150%, 0, 0);
 }
 .annotation .card:nth-child(4) {
-  top: 350px !important;
-  left: 0% !important;
+  margin-top: 350px !important;
+  margin-left: 0% !important;
   animation-delay: 0.8s;
+  -webkit-transform: translate3d(150%, 0, 0);
+  transform: translate3d(150%, 0, 0);
 }
 
 .card__Animate {
   animation: SkillUp .5s both;
-
 }
 
 @keyframes SkillUp {
   0% {
     display: none;
     opacity: 0;
-    -webkit-transform: translate3d(150%, 0, 0);
-    transform: translate3d(150%, 0, 0);
   }
   100% {
     display: block;
@@ -241,6 +248,14 @@
     transform: none;
   }
 }
+
+
+
+
+
+
+
+
 
 
 
@@ -272,7 +287,6 @@
   } 
   #Skills__Section .SkillsRight_Text {
     min-height:800px;
-    /* height: 70vh; */
     margin: 0 0 3rem 0;
   }
 }
