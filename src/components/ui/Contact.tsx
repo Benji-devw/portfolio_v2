@@ -97,9 +97,9 @@ const Contact = () => {
           <div className="ContactForm__Body">
 
             <form ref={form} onSubmit={(e) => sendEmail(e)}>
-              <input onChange={(e) => setFormData({...formData , name: e.currentTarget.value})} id='firstname' type="text" name="user_name" placeholder="Name" minLength={3} maxLength={20} pattern="[a-z0-9]{1,15}" required/>
-              <input onChange={(f) => setFormData({...formData ,email: f.currentTarget.value})} type="email" name="user_email" placeholder="email" required/>
-              <textarea onChange={(g) => setFormData({...formData ,message: g.currentTarget.value})} name="message" placeholder="message..." required/>
+              <input onChange={(e) => setFormData({...formData , name: e.currentTarget.value})} id='firstname' type="text" name="client_name" placeholder="name" minLength={3} maxLength={20} required/>
+              <input onChange={(f) => setFormData({...formData ,email: f.currentTarget.value})} type="email" name="client_email" placeholder="email" maxLength={30} required/>
+              <textarea onChange={(g) => setFormData({...formData ,message: g.currentTarget.value})} name="client_message" placeholder="message..." maxLength={180} required/>
                             
               <div className="g-recaptcha"></div>
 
