@@ -159,6 +159,7 @@
   flex: 1;
   min-width: 50vw;
   overflow: hidden;
+  background-color: var(--main-dark);  
 }
 #Skills__Section .SkillsRight_Content {
   display: flex;
@@ -193,6 +194,7 @@
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   background-color: var(--main-dark-t);  
+  filter: opacity(1);
   border-radius: 15px;
   border: 1px solid var(--main-blue-t);
   box-shadow: var(--main-shadow-lg);
@@ -202,6 +204,7 @@
   cursor: pointer;
   user-select: none !important;
 }
+
 
 .annotation .card:nth-child(1) {
   margin-top: 100px !important;

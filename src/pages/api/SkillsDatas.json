@@ -20,7 +20,7 @@
         },
         {
           "classe": "collapse_Four",
-          "title": "Mes connaissance",
+          "title": "Mes connaissances",
           "desc": "Photophop - Illutrator - XD"
         }
       ]
@@ -46,7 +46,7 @@
       },
       {
         "classe": "collapse_Eight",
-        "title": "Mes connaissance",
+        "title": "Mes connaissances",
         "desc": "Html/Css - Sass - Bootstrap/Tailwind - JavaScript - React/Nextjs - TypeScript in react - Npm - Git"
       }
     ]
@@ -72,7 +72,7 @@
       },
       {
         "classe": "collapse_Twelve",
-        "title": "Mes connaissance",
+        "title": "Mes connaissances",
         "desc": "NodeJs - Express - Postman - MongoDB - NOsql - Linux - Nginx - Pm2 - AWS - EC2 - Amplify"
       }
     ]

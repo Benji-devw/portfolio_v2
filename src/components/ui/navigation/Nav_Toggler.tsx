@@ -43,38 +43,40 @@ const NavToggler = () => {
       </div>
       {toggler && 
         <nav ref={togglerRef} id={`menu__Toggler`} className={test}>
-          <ul>
-            <li><Link activeClass="active"
-                  to="Hero__Section"
-                  spy={true}
-                  smooth={true}
-                  offset={-100}
-                  duration={500}
-            >Accueil</Link></li>
-            <li><Link activeClass="active"
-                  to="Services__Section"
-                  spy={true}
-                  smooth={true}
-                  offset={-230}
-                  duration={500}
-            >Services</Link></li>
-            <li><Link activeClass="active"
-                  to="Skills__Section"
-                  spy={true}
-                  smooth={true}
-                  offset={-230}
-                  duration={500}
-            >Compétences</Link></li>
-            <li><Link activeClass="active"
-                  to="Portfolio__Section"
-                  spy={true}
-                  smooth={true}
-                  offset={-230}
-                  duration={500}
-            >Portfolio</Link>
-            </li>
-            {/* <li><Link href='/'>Contact</Link></li> */}
-          </ul>
+          <div className="test">
+            <ul>
+              <li><Link activeClass="active"
+                    to="Hero__Section"
+                    spy={true}
+                    smooth={true}
+                    offset={-100}
+                    duration={500}
+              >Accueil</Link></li>
+              <li><Link activeClass="active"
+                    to="Services__Section"
+                    spy={true}
+                    smooth={true}
+                    offset={-230}
+                    duration={500}
+              >Services</Link></li>
+              <li><Link activeClass="active"
+                    to="Skills__Section"
+                    spy={true}
+                    smooth={true}
+                    offset={-230}
+                    duration={500}
+              >Compétences</Link></li>
+              <li><Link activeClass="active"
+                    to="Portfolio__Section"
+                    spy={true}
+                    smooth={true}
+                    offset={-230}
+                    duration={500}
+              >Portfolio</Link>
+              </li>
+              {/* <li><Link href='/'>Contact</Link></li> */}
+            </ul>
+          </div>
         </nav>
       }
  </>

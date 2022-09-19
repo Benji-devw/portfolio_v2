@@ -56,8 +56,8 @@ const SkillsArea = ({skill}: IContextProps) => {
 
   useEffect(() => {
     if (scrolled < 0.45) switchImg_StickyLeft(0);
-    if (scrolled > 0.45 && scrolled < 0.67) switchImg_StickyLeft(1);
-    if (scrolled > 0.67) switchImg_StickyLeft(2);
+    if (scrolled > 0.45 && scrolled < 0.64) switchImg_StickyLeft(1);
+    if (scrolled > 0.64) switchImg_StickyLeft(2);
 
     if (datas.length === 0 && isVisible) {
       setTimeout(() => {

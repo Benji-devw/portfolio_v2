@@ -51,7 +51,7 @@ const Services = () => {
           </svg>
           <div className={`description Fontend textBrush__Animate ${iconsIsVisible ? 'blurOut' : 'blurIn'}`}>
             <code><span>F</span>ONTEND</code>
-            <p>Bonne maitrise des logiciels de graphisme pour une interface précise et sur mesure...</p>
+            <p>Bonne maitrise des logiciels de graphisme pour une interface précise et sur mesure(Illutrator, Xd...)</p>
           </div>
         </div>
 
@@ -69,8 +69,6 @@ const Services = () => {
                 <circle className="st1" cx="150" cy="150" r="135"  stroke='url(#SVGID_2_)'/>
               </g>
               <g>
-                <line className={`st_Code ${iconsIsVisible && 'svgPath__Animate'}`} x1="96.3" y1="97.2" x2="121.9" y2="97.2"/>
-                <line className={`st_Code ${iconsIsVisible && 'svgPath__Animate'}`} x1="127.9" y1="97.2" x2="141.4" y2="97.2"/>
                 <line className={`st_Code ${iconsIsVisible && 'svgPath__Animate'}`} x1="101.3" y1="105.6" x2="135.1" y2="105.6"/>
                 <line className={`st_Code ${iconsIsVisible && 'svgPath__Animate'}`} x1="101.2" y1="114.4" x2="126.7" y2="114.4"/>
                 <line className={`st_Code ${iconsIsVisible && 'svgPath__Animate'}`} x1="132.7" y1="114.4" x2="146.2" y2="114.4"/>
@@ -79,10 +77,6 @@ const Services = () => {
                 <line className={`st_Code ${iconsIsVisible && 'svgPath__Animate'}`} x1="152.5" y1="114.4" x2="186.3" y2="114.4"/>
                 <line className={`st_Code ${iconsIsVisible && 'svgPath__Animate'}`} x1="101.2" y1="132.1" x2="140.6" y2="132.1"/>
                 <line className={`st_Code ${iconsIsVisible && 'svgPath__Animate'}`} x1="147.2" y1="132.1" x2="160.7" y2="132.1"/>
-                <line className={`st_Code ${iconsIsVisible && 'svgPath__Animate'}`} x1="181.8" y1="141.3" x2="156.3" y2="141.3"/>
-                <line className={`st_Code ${iconsIsVisible && 'svgPath__Animate'}`} x1="150" y1="141.3" x2="136.5" y2="141.3"/>
-                <line className={`st_Code ${iconsIsVisible && 'svgPath__Animate'}`} x1="96.3" y1="141.3" x2="130.1" y2="141.3"/>
-                <line className={`st_Code ${iconsIsVisible && 'svgPath__Animate'}`} x1="96.3" y1="165.2" x2="121.9" y2="165.2"/>
                 <line className={`st_Code ${iconsIsVisible && 'svgPath__Animate'}`} x1="141.4" y1="174" x2="154.9" y2="174"/>
                 <line className={`st_Code ${iconsIsVisible && 'svgPath__Animate'}`} x1="101.1" y1="174" x2="134.9" y2="174"/>
                 <line className={`st_Code ${iconsIsVisible && 'svgPath__Animate'}`} x1="152.9" y1="182.8" x2="127.4" y2="182.8"/>
@@ -92,8 +86,6 @@ const Services = () => {
                 <line className={`st_Code ${iconsIsVisible && 'svgPath__Animate'}`} x1="160.5" y1="200.5" x2="121.1" y2="200.5"/>
                 <line className={`st_Code ${iconsIsVisible && 'svgPath__Animate'}`} x1="114.5" y1="200.5" x2="101" y2="200.5"/>
                 <line className={`st_Code ${iconsIsVisible && 'svgPath__Animate'}`} x1="174.1" y1="191.7" x2="148.3" y2="191.7"/>
-                <line className={`st_Code ${iconsIsVisible && 'svgPath__Animate'}`} x1="150" y1="209.3" x2="136.5" y2="209.3"/>
-                <line className={`st_Code ${iconsIsVisible && 'svgPath__Animate'}`} x1="96.2" y1="209.3" x2="130.1" y2="209.3"/>
                 <path className={`st_Code ${iconsIsVisible && 'svgPath__Animate'}`} d="M101.2,90.9l-4.7-4.7c-0.2-0.2-0.2-0.5,0-0.7l4.7-4.7"/>
                 <path className={`st_Code ${iconsIsVisible && 'svgPath__Animate'}`} d="M112.3,80.8l4.7,4.7c0.2,0.2,0.2,0.5,0,0.7l-4.7,4.7"/>
                 <line className={`st_Code ${iconsIsVisible && 'svgPath__Animate'}`} x1="104.6" y1="91.3" x2="108.8" y2="80.4"/>

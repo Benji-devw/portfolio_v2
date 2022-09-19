@@ -18,7 +18,6 @@
   box-shadow: var(--main-shadow-t);
   padding: .3rem;
   width: 100%;
-  
 }
 
 .Nav__Main .active {
@@ -53,7 +52,6 @@
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
-	
 	height: 58px;
 	width: 1080px;
 }
@@ -98,15 +96,18 @@
 #menu__Toggler {
   position: fixed;
   right: 0rem;
-  top: 3.5rem;
+  top: 4rem;
   width: 50%;
-  -webkit-backdrop-filter: blur(15px);
-  backdrop-filter: blur(15px);
+  color: var(--main-light);
+  background-color: var(--main-dark);
   box-shadow: var(--main-shadow-t);
   padding: 0 1rem;
+  border-radius: 10px;
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
 }
 .Nav__Toggler {
- display: none !important;
+  display: none !important;
 }
 .Nav__Toggler ul {
   padding: 0;

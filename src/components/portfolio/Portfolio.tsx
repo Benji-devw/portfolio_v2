@@ -1,5 +1,4 @@
-import { useState, useEffect, ReactNode } from 'react';
-import { useRouter } from 'next/router';
+import { useState, useEffect } from 'react';
 import Image from "next/image";
 import { Modal } from '@/structures/Modal';
 import Slider from "react-slick";
@@ -11,7 +10,6 @@ import { logos } from '@/api/logosData';
 
 
 const Portfolio = () => {
-  const router = useRouter();
   const [previewHover, setPreviewHover] = useState('')
   const [isOpen, setIsOpen] = useState(false);
   const [datasForModal, setDatasForModal] = useState<any>()
@@ -47,7 +45,7 @@ const Portfolio = () => {
                 <div key={id} className={`ModalSlick__SlideCard`}>
                   <Image key={id}
                     src={`${item.src}`}
-                    alt={'img'}
+                    alt={'slide_media'}
                     priority
                     layout='fill'
                     objectFit='contain'
@@ -73,7 +71,7 @@ const Portfolio = () => {
               <Image 
                 className={`${previewHover === 'design' ? 'blurOut': 'blurIn'}`}
                 src={`/media/Design-Orange.jpg`} 
-                alt={'Illustration'}
+                alt={'illus_media'}
                 priority
                 layout='fill'
                 objectFit='cover'
@@ -94,7 +92,7 @@ const Portfolio = () => {
               <Image 
                 className={`${previewHover === 'web' ? 'blurOut': 'blurIn'}`}
                 src={`/media/aleph.jpg`} 
-                alt={'Web'}
+                alt={'web_media'}
                 priority
                 layout='fill'
                 objectFit='cover'
@@ -114,7 +112,7 @@ const Portfolio = () => {
               <Image 
                 className={`${previewHover === 'logo' ? 'blurOut': 'blurIn'}`}
                 src={`/media/Logo-Vallena.svg`} 
-                alt={'Logo'}
+                alt={'logo_media'}
                 priority
                 layout='fill'
                 objectFit='contain'
@@ -134,7 +132,7 @@ const Portfolio = () => {
               <Image 
                 className={`${previewHover === 'composant' ? 'blurOut': 'blurIn'}`}
                 src={`/media/NB_Certification_Inté_FRONT.jpg`} 
-                alt={'test'}
+                alt={'formations_media'}
                 priority
                 layout='fill'
                 objectFit='cover'
