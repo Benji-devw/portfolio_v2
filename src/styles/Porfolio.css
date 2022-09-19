@@ -39,7 +39,24 @@
 
 
 
-
+.video {   
+  position: relative;
+  z-index: 500;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;   
+  width: 100vw;
+  height: 0px;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.video iframe {
+  width: 740px;
+  height: 50vh;
+}
 
 
 
@@ -57,6 +74,7 @@
 .Modal__Wrapper .ModalSlick__SlideCard {
   position: relative;
   height: 450px;
+  width: 80vw;
 }
 
 .slick-list {

@@ -13,7 +13,7 @@ const Portfolio = () => {
   const [previewHover, setPreviewHover] = useState('')
   const [isOpen, setIsOpen] = useState(false);
   const [datasForModal, setDatasForModal] = useState<any>()
-  var reactSlickSettings = { infinite: false, slidesToShow: 1, slidesToScroll: 1, };
+  var reactSlickSettings = { infinite: false, slidesToShow: 1, slidesToScroll: 1, adaptiveHeight: true };
 
   useEffect(() => {
     if (isOpen) {
@@ -25,9 +25,11 @@ const Portfolio = () => {
     }
   }, [isOpen])
 
+  // const src = "/media/www_screencapture_com_2022-9-19_15_30.webm";
   return (
     <section id='Portfolio__Section'>
       <div className="grid-container">
+
 
           {isOpen && (
             <Modal>
@@ -43,13 +45,26 @@ const Portfolio = () => {
               <Slider {...reactSlickSettings}>
                 {datasForModal.map((item: any, id: any) => 
                 <div key={id} className={`ModalSlick__SlideCard`}>
-                  <Image key={id}
-                    src={`${item.src}`}
-                    alt={'slide_media'}
-                    priority
-                    layout='fill'
-                    objectFit='contain'
-                  /> 
+                  {item.video ? 
+                        <div className="video">
+                          <iframe key={id}
+                          width="740" 
+                          // height="560"
+                          src={`${item.src}`}
+                          sandbox=""
+                          frameBorder="0"
+                          allowFullScreen
+                        />
+                        </div>
+                      :
+                      <Image key={id}
+                        src={`${item.src}`}
+                        alt={'slide_media'}
+                        priority
+                        layout='fill'
+                        objectFit='contain'
+                      /> 
+                }
                   <div className="ModalSlick__Infos">
                       {item.link != 'false' ? <p><Link href={item.link} passHref><a target="_blank">{item.name}</a></Link></p> : item.name } 
                       <p>{item.description}</p>

@@ -97,7 +97,7 @@ const Contact = () => {
           <div className="ContactForm__Body">
 
             <form ref={form} onSubmit={(e) => sendEmail(e)}>
-              <input onChange={(e) => setFormData({...formData , name: e.currentTarget.value})} id='firstname' type="text" name="client_name" placeholder="name" minLength={3} maxLength={20} required/>
+              <input onChange={(e) => setFormData({...formData , name: e.currentTarget.value})} id='firstname' name="client_name" placeholder="name" minLength={3} maxLength={20} required/>
               <input onChange={(f) => setFormData({...formData ,email: f.currentTarget.value})} type="email" name="client_email" placeholder="email" maxLength={30} required/>
               <textarea onChange={(g) => setFormData({...formData ,message: g.currentTarget.value})} name="client_message" placeholder="message..." maxLength={180} required/>
                             
