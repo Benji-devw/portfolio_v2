@@ -1,12 +1,5 @@
 import { LineSection } from '@/components/background/LineSection'
-
-type ITitleProps = {
-  id: string
-  title: string;
-  text: string;
-  classN?: string;
-  color?: string;
-};
+import { ITitleProps } from '@/types/types';
 
 const TitleSection = (props: ITitleProps) => (
   <div id={props.id} className='titleSection'>

@@ -2,9 +2,9 @@ import { useState, useEffect, useRef } from 'react';
 
 
 const Services = () => {
-  const iconsRef = useRef<HTMLDivElement>(null)
-  const [iconsIsVisible, setIconsIsVisible] = useState(false)
-  const [scrolled, setScrolled] = useState(0)
+  const iconsRef =                            useRef<HTMLDivElement>(null)
+  const [scrolled, setScrolled] =             useState<number>(0)
+  const [iconsIsVisible, setIconsIsVisible] = useState<boolean>(false)
 
   const listenToScroll = () => {
     const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -19,7 +19,6 @@ const Services = () => {
       setIconsIsVisible(entry.isIntersecting)
     })
     observer.observe(iconsRef.current)
-
     window.addEventListener("scroll", listenToScroll);
     return () => window.removeEventListener("scroll", listenToScroll)
   }, []);
@@ -27,7 +26,6 @@ const Services = () => {
 
   return (
     <section id="Services__Section">
-
       <div ref={iconsRef} className="IconPath__Main">
         
         <div className="Services__Item Brush">
@@ -138,7 +136,6 @@ const Services = () => {
         </div>
 
       </div>
-
     </section>
     );
 }

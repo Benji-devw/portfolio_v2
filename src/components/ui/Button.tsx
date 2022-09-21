@@ -1,16 +1,8 @@
-import { ReactElement } from "react";
+import { IButtonProps } from "@/types/types";
 
-type IButtonProps = {
-  xl?: boolean;
-  children: ReactElement;
-  classN: string;
-};
-
-const MainButton = (props: IButtonProps) => (
-    <div className={props.classN}>
-      {props.children}
+const MainButton = ({classN, children}: IButtonProps) => (
+    <div className={classN}>
+      {children}
     </div>
   );
-
-
 export { MainButton };

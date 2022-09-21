@@ -4,14 +4,14 @@ import { createRef, useCallback, useEffect, useState } from "react";
 
 const NavToggler = () => {
   
-  const togglerRef = createRef<HTMLDivElement>()
-  const [toggler, setToggler] = useState(false)
-  const [test, setTest] = useState('')
+  const togglerRef =            createRef<HTMLDivElement>()
+  const [toggler, setToggler] = useState<boolean>(false)
+  const [test, setTest] =       useState<string>('')
 
   const handleToggler = useCallback((e: any) => {
-    if (!toggler) {setTest('blurOut'), setToggler(!toggler)}
-    if (toggler) setTest('slideOutRight')
-    setTimeout(() => { setToggler(!toggler), setTest('')}, 500);
+    if (!toggler)     {setTest('blurOut'), setToggler(!toggler)}
+    if (toggler)      setTest('slideOutRight')
+    setTimeout(() =>  {setToggler(!toggler), setTest('')}, 500);
   }, [toggler])
 
   useEffect(() => {

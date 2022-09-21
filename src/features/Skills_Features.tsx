@@ -4,13 +4,11 @@ import { TitleSection } from '@/components/background/TitleSection'
 import Skillsdatas from '@/api/SkillsDatas.json'
 
 const SkillsFeatures = () => {
-  
   return (
   <Background classN="Skills__Wrapper" color="">
     <div className={"Skills__Content"}>
 
       <TitleSection id='Skills' title='Compétences' text='Mes Outils et mes perceptions' />
-      
       <SkillsArea skill={Skillsdatas}/>
 
     </div>

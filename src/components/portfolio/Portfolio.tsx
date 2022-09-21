@@ -10,8 +10,9 @@ import { logos } from '@/api/logosData';
 
 
 const Portfolio = () => {
-  const [previewHover, setPreviewHover] = useState('')
-  const [isOpen, setIsOpen] = useState(false);
+
+  const [previewHover, setPreviewHover] =   useState<string>('')
+  const [isOpen, setIsOpen] =               useState<boolean>(false);
   const [datasForModal, setDatasForModal] = useState<any>()
   var reactSlickSettings = { infinite: false, slidesToShow: 1, slidesToScroll: 1, adaptiveHeight: true };
 
@@ -25,7 +26,7 @@ const Portfolio = () => {
     }
   }, [isOpen])
 
-  // const src = "/media/www_screencapture_com_2022-9-19_15_30.webm";
+
   return (
     <section id='Portfolio__Section'>
       <div className="grid-container">
@@ -153,7 +154,7 @@ const Portfolio = () => {
                 objectFit='cover'
               />
               ) : (
-              <h4 className={`${previewHover === 'composant' ? 'blurIn': 'blurOut'}`} >Formations</h4>
+              <h4 className={`${previewHover === 'composant' ? 'blurIn': 'blurOut'}`} >Formation</h4>
             )}
           </div>
         </div>

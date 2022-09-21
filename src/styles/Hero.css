@@ -16,9 +16,6 @@
     hsl(214deg 76% 51%) 84%,
     hsl(208deg 94% 49%) 100%
   );
-  /* background-image: linear-gradient(to right top, #2f135a, #1f3e85, #0067a9, #008fc5, #21b7da); */
-  /* background: linear-gradient(45deg, #2D1A63 20%, #262D7D 20%, rgba(33,183,218,1) 100%); */
-  /* background: linear-gradient(45deg, #2D1A63, #262D7D, #1B4CA6, #0C77DF, #0785F2); */
 }
 
 
@@ -68,9 +65,8 @@
   padding: 0;
   margin: 0;
 
-  background: url('/media/profile_img.png');
-  background-size: 100%;
-  background-position: -100px;
+  background: url('/media/profile_img.svg');
+  background-size: 90%;
   background-repeat: no-repeat;
   -webkit-text-fill-color: transparent;
   color: transparent;

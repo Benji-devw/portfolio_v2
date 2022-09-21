@@ -1,24 +1,21 @@
 import { useCallback, useEffect, useState } from 'react';
 import {useMove} from '../../utils/mouseCoords'
+import { IHeroProps } from '@/types/types'
 
-type IHeroProps = {
-  lastName: string
-  firstName: string
-  post?: string
-};
 
 
 const Hero = (props: IHeroProps) => {
   const {x, y, handleMouseMove} = useMove()
-  const [word, setWord] = useState('NextJs');
+  const [word, setWord] =         useState<string>('NextJs');
 
   
   const shuffle = useCallback(() => {
     const names = ['React','NextJs', 'NodeJs', 'JavaScript ', 'NOsql ', 'TypeScript', 'Sass', 'Illustrator', 'Photoshop', 'XD']
-      const index = Math.floor(Math.random() * names.length);
-      setWord(names[index]);
+    const index = Math.floor(Math.random() * names.length);
+    setWord(names[index]);
   }, []);
-
+  
+  
   useEffect(() => {
       const intervalID = setInterval(shuffle, 6000);
       return () => clearInterval(intervalID);

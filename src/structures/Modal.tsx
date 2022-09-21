@@ -1,12 +1,9 @@
 import React, { ReactNode, useEffect, useState, useRef } from 'react';
 import { createPortal } from "react-dom";
+import { IModalProps } from '@/types/types';
 
 
-interface ModalProps {
-  children: ReactNode
-}
-
-const Modal = ({children}: ModalProps) => {
+const Modal = ({children}: IModalProps) => {
   const el = useRef(document.createElement("div"));
 
   useEffect(() => {

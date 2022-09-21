@@ -2,35 +2,32 @@ import Image from "next/image";
 import emailjs from '@emailjs/browser';
 import { useRef, useState } from "react";
 import { useRouter } from "next/router";
+import { IFormPost } from "@/types/types";
+// import { eventTrack } from '../../utils/useAnalyticsEventTracker';
 // import ReCAPTCHA from "react-google-recaptcha";
-import {eventTrack} from '../../utils/useAnalyticsEventTracker';
-
-
-interface IFormPost {  
-  name?: string  
-  email?: string  
-  message?: string
-}
 
 
 
 const Contact = () => {
   
-  const router = useRouter();
+  const router =                              useRouter();
+  const form =                                useRef<HTMLFormElement | null>(null)
+  const [formData, setFormData] =             useState<IFormPost>()
+  const [openContact, setOpenContact] =       useState<boolean>(false)
+  const [sendCheck, setSendCheck] =           useState<boolean>(false)
+  const [sendCheckValid, setSendCheckValid] = useState<boolean>(false)
+  const [sendCheckError, setSendCheckError] = useState<boolean>(false)
   // const recaptchaRef = useRef<ReCAPTCHA>()
-  const form = useRef<HTMLFormElement | null>(null)
-  const [openContact, setOpenContact] = useState(false)
-  const [formData, setFormData] = useState<IFormPost>()
-  const [sendCheck, setSendCheck] = useState(false)
-  const [sendCheckValid, setSendCheckValid] = useState(false)
-  const [sendCheckError, setSendCheckError] = useState(false)
 
+  const handleContact = () => {
+    setOpenContact(!openContact)
+  }
 
 
   const sendEmail = (e: any) => {
     e.preventDefault()
-    setSendCheck(true)
 
+    setSendCheck(true)
     const resetForm = e.target as HTMLFormElement;
     
     emailjs.sendForm('service_9p86mok', 'template_z6jbpjq', e.target, 'ittbXHEclFdLS1CCB')
@@ -41,7 +38,7 @@ const Contact = () => {
           setSendCheckValid(true)
           setFormData({name:'', email:'',message:'' })
           resetForm.reset();
-          eventTrack('contact_send', 'Click to send', 'Button')
+          // eventTrack('contact_send', 'Click to send', 'Button')
       }, 2000);
     }, (error) => {
       // console.log(error.text);
@@ -52,15 +49,7 @@ const Contact = () => {
       });
   };
 
-  const handleContact = () => {
-    setOpenContact(!openContact)
-  }
 
-  // const handleChange = ( e: React.ChangeEvent<HTMLInputElement>) => {
-  //   setFormData({...formData, 
-  //       "firstname": e.target.value,  
-  //   });
-  // }
   
   return (
     <div id="Contact">
@@ -103,12 +92,12 @@ const Contact = () => {
                             
               <div className="g-recaptcha"></div>
 
-                {sendCheck ? 
-                  !sendCheckValid ? 
-                    <div className="lds-facebook"><div></div><div></div><div></div></div> 
-                    : <p>Message Envoyé</p>
-                  : <button type='submit'>{sendCheckError ? 'Réessayer' : 'Envoyer'}</button>
-                  }
+              {sendCheck ? 
+                !sendCheckValid ? 
+                  <div className="lds-facebook"><div></div><div></div><div></div></div> 
+                  : <p>Message Envoyé</p>
+                : <button type='submit'>{sendCheckError ? 'Réessayer' : 'Envoyer'}</button>
+                }
 
             </form>
           </div>

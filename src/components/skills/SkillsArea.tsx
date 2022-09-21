@@ -1,31 +1,29 @@
 import { useState, useEffect, createRef, ReactNode } from 'react';
 import { useRouter } from 'next/router';
 import Image from "next/image";
+import { ISkillsProps } from '@/types/types';
 
 
-type IContextProps = {
-  skill: ReactNode | any
-}
 
-const SkillsArea = ({skill}: IContextProps) => {
+const SkillsArea = ({skill}: ISkillsProps) => {
 
-  const router = useRouter();
-  const rootRef = createRef<HTMLDivElement>()
-  const designRef = createRef<HTMLDivElement>()
-  const progRef = createRef<HTMLDivElement>()
-  const backendRef = createRef<HTMLDivElement>()
-  const [scrolled, setScrolled] = useState(0)
-  const [isVisible, setIsVisible] = useState(false)
-  const [designIsVisible, setDesignIsVisible] = useState(false)
-  const [progIsVisible, setProgIsVisible] = useState(false)
-  const [backendisVisible, setBackendIsVisible] = useState(false)
-  const [zIndex, setZIndex] = useState(0)
+  const router =      useRouter();
+  const rootRef =     createRef<HTMLDivElement>()
+  const designRef =   createRef<HTMLDivElement>()
+  const progRef =     createRef<HTMLDivElement>()
+  const backendRef =  createRef<HTMLDivElement>()
+  const [zIndex, setZIndex] =       useState<number>(0)
+  const [scrolled, setScrolled] =   useState<number>(0)
+  const [isVisible, setIsVisible] =               useState<boolean>(false)
+  const [designIsVisible, setDesignIsVisible] =   useState<boolean>(false)
+  const [progIsVisible, setProgIsVisible] =       useState<boolean>(false)
+  const [backendisVisible, setBackendIsVisible] = useState<boolean>(false)
+  const [datasWait, setDatasWait] =               useState<boolean>(false)
 
-  const [datas, setDatas] = useState([])
-  const [checkScreenW, setCheckScreenW] = useState<any>(0)
-  const [switchStickyImg, setSwitchStickyImg] = useState<any>(0)
-  const [switchStickyClass, setswitchStickyClass] = useState(0)
-  const [datasWait, setDatasWait] = useState(false)
+  const [datas, setDatas] =                         useState<string[]>([])
+  const [checkScreenW, setCheckScreenW] =           useState<number | undefined>(0)
+  const [switchStickyImg, setSwitchStickyImg] =     useState<number>(0)
+  const [switchStickyClass, setswitchStickyClass] = useState<number>(0)
   const sticky_left_src = [
     `${router.basePath}/media/SkillsLeft__Frontend.svg`,
     `${router.basePath}/media/SkillsLeft__Programmation.svg`,
@@ -102,7 +100,7 @@ const SkillsArea = ({skill}: IContextProps) => {
       <div className="Skills_Section">
 
         {datasWait ? 
-          checkScreenW > 800 && 
+          checkScreenW! > 800 && 
           <div className={`Skills_Left ${!datasWait ? 'blurIn' : 'blurOut'}`} style={{height: !datasWait ? '80vh' : ''}}>
             <div className="SkillsLeft_Content">
                 <div className='SkillsLeft__Images'>
@@ -130,6 +128,7 @@ const SkillsArea = ({skill}: IContextProps) => {
           </div>
         : <div className='dataWait'><div className='dataWait_picture'></div></div> 
         }
+
 
         {datasWait ? 
           <div className="Skills_Right" style={{height: !datasWait ? '80vh' : ''}}>
