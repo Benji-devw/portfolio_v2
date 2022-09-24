@@ -14,6 +14,12 @@ const illustrations = [
     "src": "/media/Background-Illustration.jpg"
   },
   {
+    "name": "Photoshop",
+    "link": "false",
+    "description": "",
+    "src": "/media/404.jpg"
+  },
+  {
     "name": "Illustrator",
     "link": "false",
     "description": "",

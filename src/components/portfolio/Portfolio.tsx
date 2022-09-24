@@ -127,7 +127,7 @@ const Portfolio = () => {
             {previewHover === 'logo' ? (
               <Image 
                 className={`${previewHover === 'logo' ? 'blurOut': 'blurIn'}`}
-                src={`/media/Logo-Vallena.svg`} 
+                src={`/media/LOGO_DA.svg`} 
                 alt={'logo_media'}
                 priority
                 layout='fill'
