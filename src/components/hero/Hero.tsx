@@ -5,21 +5,26 @@ import { IHeroProps } from '@/types/types'
 
 
 const Hero = (props: IHeroProps) => {
-  const {x, y, handleMouseMove} = useMove()
-  const [word, setWord] =         useState<string>('NextJs');
 
+  const {x, y, handleMouseMove} = useMove()
+  const [word, setWord] =         useState<string>('React');
+  const [count, setCount] =       useState<number>(1);
+  const [test, setTest] =         useState<string>('');
   
-  const shuffle = useCallback(() => {
-    const names = ['React','NextJs', 'NodeJs', 'JavaScript ', 'NOsql ', 'TypeScript', 'Sass', 'Illustrator', 'Photoshop', 'XD']
-    const index = Math.floor(Math.random() * names.length);
-    setWord(names[index]);
-  }, []);
+  const wordCounter = useCallback(() => {
+    const names = ['', 'NextJs', 'NodeJs', 'JavaScript ', 'NOsql ', 'TypeScript', 'Sass', 'Illustrator', 'Photoshop', 'XD', 'React']
+    if (count === names.length -1) setCount(1)
+    else setCount(count+1);
+    setWord(names[count])
+    setTest('animTest')
+  }, [count]);
   
   
   useEffect(() => {
-      const intervalID = setInterval(shuffle, 6000);
-      return () => clearInterval(intervalID);
-  }, [shuffle])
+    const intervalID = setInterval(wordCounter, 5000);
+    return () => clearInterval(intervalID);
+  }, [wordCounter])
+
     
 
   return (
@@ -28,16 +33,15 @@ const Hero = (props: IHeroProps) => {
 
       <div className={`HeroTitle__Main`}>
         <h1 style={{backgroundPositionY: y, backgroundPositionX : x / 10}}>{props.lastName}</h1> 
-        {/* <span style={{top: y / 30, left: x / 30}} className='ts1'>{props.lastName}</span>  */}
-        {/* <span style={{top: y / 20, left: x / 20}} className='ts2'>{props.lastName}</span>  */}
-        <span className='firstName'>{props.firstName}</span>
+        <span className='HeroTitle__Shad'>NAVARRO</span>
+        <span className='HeroTitle__FirstName'>{props.firstName}</span>
       </div>
 
       <div className={`Hero__Subtitle`}>
         <div className="post">
           <span>{props.post}</span>
             <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
-              <text x="7" y="68" className="small">{word}</text>
+              <text x="7" y="68" className={`small`}>{word}</text>
             </svg>
         </div>
       </div>

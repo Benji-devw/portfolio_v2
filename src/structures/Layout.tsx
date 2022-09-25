@@ -27,7 +27,7 @@ if (process.browser) {
 
       <NavFeatures />
       <Contact />
-      <main role='document' className={`container Main__Wrapper fadeIn`}>
+      <main role='document' className={`container Main__Wrapper blurOut`}>
         {children}
       </main>
       <Footer />

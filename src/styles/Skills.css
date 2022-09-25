@@ -157,7 +157,7 @@
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  min-width: 50vw;
+  min-width: 40vw;
   overflow: hidden;
   background-color: var(--main-dark);  
 }

@@ -56,44 +56,45 @@
 .HeroTitle__Main {
   position: relative;
   pointer-events: none;
+  /* height: 250px; */
 }
 
 .HeroTitle__Main h1 {
   position: relative;
+  /* left: 50%; */
+  /* top: 50%; */
+  /* transform: translate(-50%, -50%); */
   z-index: 3;
   font-size: 7rem;
   padding: 0;
   margin: 0;
 
+  background-position: 100%;
   background: url('/media/profile_img.svg');
-  background-size: 90%;
+  background-size: 100%;
   background-repeat: no-repeat;
   -webkit-text-fill-color: transparent;
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
 }
-.ts1, .ts2 {
+.HeroTitle__Main .HeroTitle__Shad {
+  font-size: 7rem;
+  color: var(--main-light);
   position: absolute;
-  top: 50%;
-  left: 50%;
-  /* transform: translate(-50%, -50%); */
-  background: var(--main-grad);
-  background-clip: text;
-  -webkit-text-stroke: 3px transparent;
-  color: var(--main-dark);
-}
-.ts1 {
+  left: 52%;
+  top: 37%;
+  transform: translate(-50%, -50%);
   z-index: 2;
-  font-size: 6.8rem;
-}
-.ts2 {
-  z-index: 1;
-  font-size: 6.6rem;
-}
+  letter-spacing: .12rem;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke: 1px var(--main-light);
 
-
-.firstName {
+}
+.HeroTitle__FirstName {
   position: relative;
   z-index: 6;
   margin: 0;
@@ -103,10 +104,11 @@
   width: 100%;
   background: var(--main-light);
   background-clip: text;
-  -webkit-text-stroke: 3px transparent;
+  -webkit-text-stroke: 2px transparent;
   color: var(--main-dark);
   text-transform: uppercase;
 }
+
 
 
 
@@ -140,15 +142,21 @@
   stroke-width: 1;
   stroke-dashoffset: 100%;
   stroke-dasharray: 100%;
-  animation: wordSwith 6s ease-in-out infinite;
+  animation: wordSwith 5s ease-in-out infinite;
 }
+
 @keyframes wordSwith {
-  /* to{stroke-dashoffset: 0;} */
+  /* 0% {stroke-dashoffset: 0%;} */
   10%{stroke-dashoffset: 100%;}
   25%{stroke-dashoffset: 0%;}
   75%{stroke-dashoffset: 0%;}
   90%{stroke-dashoffset: 100%;}
+  /* 100%{stroke-dashoffset: 0%;} */
 }
+
+
+
+
 
 
 
@@ -201,11 +209,10 @@
   .HeroTitle__Main h1 {
     font-size: 4rem;
   }
-  .ts1 {
-    font-size: 3.8rem;
-  }
-  .ts2 {
-    font-size: 3.6rem;
+  .HeroTitle__Main .HeroTitle__Shad {
+    font-size: 4rem;
+    left: 52%;
+    top: 30%;
   }
   .Hero__Subtitle {
     text-align: center;
